@@ -1,0 +1,33 @@
+@import 'node_modules/@angular/material/theming';
+@import 'src/scss/partials/colors';
+@import 'src/scss/partials/global';
+
+
+//TODO: togliere flexbox e allineare icona al testo
+.badge-container {
+  width: 153px;
+  height: 38px;
+  color: $background;
+
+  .content {
+    min-width: 135px;
+    height: 34px;
+    background-color: $primary-dark;
+    border-top-right-radius: 3px;
+  }
+
+  .ligature {
+    width: 15px;
+    height: 34px;
+    margin-top: 8px;
+    margin-right: 4px;
+    background-color: $primary-dark;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  mat-icon {
+    display: inline;
+  }
+
+}

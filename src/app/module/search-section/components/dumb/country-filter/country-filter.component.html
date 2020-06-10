@@ -1,0 +1,12 @@
+
+<ng-select
+  [items]="countryFilterState?.countries"
+  (change)="onFilterChanged()"
+  bindValue="country"
+  bindLabel="country"
+  placeholder="Select a country"
+  [appearance]="'outline'"
+  [(ngModel)]="countryFilterState.currentValue"
+  [markFirst]="true"
+  class="ng-select-override"></ng-select>
+

@@ -1,0 +1,15 @@
+<app-form-upsert-address
+  (closeForm)="closeFormAddress()"
+  (submitForm)="submitForm($event)"
+  *ngIf="newAddress"></app-form-upsert-address>
+<button *ngIf="!newAddress"  class="container-button shadow-section rh24 regular secondary-40"
+        (click)="addNewAddress()"
+        mat-button>
+  <span class="internal-container-button">
+    <fa-icon size="lg"
+             class="icon-plus"
+             [icon]="['fas', 'plus']">
+    </fa-icon>
+    <span i18n>Add new address</span>
+  </span>
+</button>

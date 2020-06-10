@@ -1,0 +1,2 @@
+<app-standard-card-theme *ngIf="!this.card?.specialCard" class="standard-card" [card]="card"></app-standard-card-theme>
+<app-special-card *ngIf="this.card?.specialCard" class="special-card" [card]="card"></app-special-card>

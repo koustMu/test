@@ -1,0 +1,31 @@
+<div class="header-container shadow-section">
+  <div class="header">
+    <app-teascanner-long-log routerLinkActive="active" routerLink="/home"></app-teascanner-long-log>
+    <div class="central-frame-bar-menu">
+      <div class="bar-container">
+        <app-drop-down-type-header [selectedProductCategory]="selectedProductCategory"
+                                   (onSearchProductCategory)="onSearchProductCategory($event)"
+                                   class="drop-down-type"></app-drop-down-type-header>
+        <app-search-bar-header (onSearch)="onQuerySearch($event)"
+                               [searchQuery]="searchQuery"></app-search-bar-header>
+      </div>
+      <app-dropdown-menu-header></app-dropdown-menu-header>
+    </div>
+    <div *ngIf="userInfo$ | async as userInfo" class="icons-container">
+<!--      <div class="sing-in-register">
+        <div class="sing-in rh14 regular secondary" i18n>Sing in</div>
+        <div class="separator rh14 regular secondary" i18n>/</div>
+        <div class="register rh14 bold secondary" i18n>Register</div>
+      </div>-->
+      <div routerLinkActive="active" [routerLink]="['/user']" class="user-welcome-container cursor-pointer">
+        <div class="image-profile" [style.backgroundImage]="'url('+ userInfo.profilePicture.url +')'"></div>
+        <div class="user-credential rh14 secondary-40">{{userInfo.lastName}} {{userInfo.firstName}}</div>
+      </div>
+      <fa-icon class="favorites-icon rh24 secondary-40" routerLinkActive="active" routerLink="/user/favorites" [icon]="['fas','heart']"></fa-icon>
+      <app-cart-icons-header
+        routerLinkActive="active"
+        routerLink="/cart"
+        class="cart-icon" [productCart]="userInfo.totalCartProducts"></app-cart-icons-header>
+    </div>
+  </div>
+</div>

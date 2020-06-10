@@ -1,0 +1,151 @@
+<form
+  class="container-form-address"
+  [formGroup]="addressForm"
+  (ngSubmit)="onSubmit(addressForm.value)">
+  <div class="sub-item">
+    <label class="title-input first-name">
+      First Name
+      <input
+        formControlName="firstName"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+    </label>
+    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+      <div *ngIf="f.firstName.errors.required">First Name is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input email">
+      Email
+      <input
+        formControlName="email"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+    </label>
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+      <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+    </div>
+  </div>
+
+  <div class="sub-item">
+    <label class="title-input email" i18n>
+      Country
+      <app-shipping-country-button-address [placeholder]="addressInitForm === undefined ? 'Country' : addressInitForm.country.name" (onChangeSelectedCountry)="countrySelected($event)"></app-shipping-country-button-address>
+      <input hidden formControlName="country" type="text">
+    </label>
+    <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+      <div *ngIf="f.country.errors.required">Country is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input city">
+      City
+      <input
+        formControlName="city"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.city.errors }">
+    </label>
+    <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+      <div *ngIf="f.city.errors.required">Address is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input last-name">
+      Last Name
+      <input
+        formControlName="lastName"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+    </label>
+    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+      <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+    </div>
+  </div>
+  <div class="sub-item" i18n>
+    <label class="title-input phone-number">
+      Phone Number
+      <input
+        formControlName="phoneNumber"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }">
+    </label>
+    <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+      <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input state-province-region" i18n>
+      State/Province/Region
+      <input
+        formControlName="state"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+    </label>
+    <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+      <div *ngIf="f.state.errors.required">State/Province/Region is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input zip-code">
+      Zip Code
+      <input
+        formControlName="zipCode"
+        type="text"
+        class="input-text"
+        [ngClass]="{ 'is-invalid': submitted && f.zipCode.errors }">
+    </label>
+    <div *ngIf="submitted && f.zipCode.errors" class="invalid-feedback">
+      <div *ngIf="f.zipCode.errors.required">Zip Code is required</div>
+    </div>
+  </div>
+  <div class="sub-item">
+    <label class="title-input address" i18n>
+      Address
+      <input
+        id="addressForm1"
+        formControlName="address"
+        type="text"
+        class="input-text-long first-input-text-long"
+        [ngClass]="{ 'is-invalid': submitted && f.address.errors }">
+      <input
+        formControlName="addressMoreInfo"
+        type="text"
+        class="input-text-long">
+    </label>
+    <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+      <div *ngIf="f.address.errors.required">Address is required</div>
+    </div>
+  </div>
+  <div class="sub-item sub-item-large">
+    <label class="title-input add-delivery-instructions" i18n>
+      Add delivery instructions:
+      <textarea
+        style="resize: none"
+        maxlength="300"
+        formControlName="additionalInfo"
+        type="text"
+        class="input-text-long-large"></textarea>
+    </label>
+  </div>
+
+  <div class="button-container">
+    <button
+      class="button button-cancel"
+      mat-stroked-button i18n
+      (click)="removeForm()">CANCEL
+    </button>
+    <button
+      mat-button
+      class="button button-save"
+      type="submit"
+      i18n>SAVE
+    </button>
+  </div>
+</form>

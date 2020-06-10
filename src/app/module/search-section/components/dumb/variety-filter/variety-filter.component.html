@@ -1,0 +1,11 @@
+
+<ng-select
+  [items]="varietyState?.varieties"
+  (change)="onFilterChanged()"
+  bindLabel="value"
+  bindValue="value"
+  placeholder="Select a variety"
+  [appearance]="'outline'"
+  [(ngModel)]="varietyState.currentValue"
+  [markFirst]="true"
+  class="ng-select-override"></ng-select>

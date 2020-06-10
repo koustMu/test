@@ -1,0 +1,95 @@
+{
+   "description": "Tea hawaiano",
+   "name": "*2088 Tè venuto dal futuro (500 x 20g)",
+   "originalId": "salvatore-id-futuro",
+   "productCategory": "TEA",
+   "region": "Brasil",
+   "shippingFrom": "BR",
+   "url": "https://crimsonlotustea.com/collections/new-products/products/2014-chitsupingcha-sheng-puerh-tea-400g-cake-free-shipping",
+   "images": [
+       {
+           "name": "immagini",
+           "url": "https://cdn.shopify.com/s/files/1/0303/0437/products/2019-chitsupingcha-2048x-4_1024x1024.png?v=1572632250"
+       },
+       {
+           "name": "immagini",
+           "url": "https://cdn.shopify.com/s/files/1/0303/0437/products/2019-chitsupingcha-2048x-1_1024x1024.png?v=1572632250"
+       },
+       {
+           "name": "immagini",
+           "url": "https://cdn.shopify.com/s/files/1/0303/0437/products/2019-chitsupingcha-2048x-2_1024x1024.png?v=1572632250"
+       },
+       {
+           "name": "immagini",
+           "url": "https://cdn.shopify.com/s/files/1/0303/0437/products/2019-chitsupingcha-2048x-3_1024x1024.png?v=1572632250"
+       }
+   ],
+   "teaDetails": {
+      "aroma": [
+         "miglior_aroma_sulla_scena_comunale"
+      ],
+      "certifiedOrganic": false,
+      "cultivar": "nome coltivazione",
+      "elevation": 5000,
+      "infusionDetails": [
+         {
+            "centigradeTemp": 3,
+            "fahrenheitTemp": 33,
+            "leafQuantity": 12,
+            "style": "infusione randagia",
+            "times": [
+               0
+            ],
+            "totalInfusions": 0,
+            "waterQuantity": 0
+         }
+      ],
+      "pressed": true,
+      "pricePerGram": 0,
+      "roasted": false,
+      "sample": true,
+      "season": "AUTUMN",
+      "taste": [
+         "descrizione sapoer"
+      ],
+      "variety": "Tea details: varietà",
+      "year": 2048
+   },
+   "type": "Black",
+   "thumbnail": {
+       "name": "nome_immagine",
+       "url": "https://theteaguru.co.uk/wp-content/uploads/2019/02/allcakes-1.jpg"
+   },
+   "variants": [
+       {
+           "id": "1234567892a7654321",
+           "name": "Variante-strana",
+           "value": "500g",
+           "remainingQuantity": 3,
+           "originalPrice": {
+               "price": 129.99,
+               "currency": "USD"
+           },
+           "eurPrice": {
+               "price": 82.7,
+               "currency": "EUR"
+           }
+       },
+       {
+           "id": "0987683321",
+           "name": "Nome sample",
+           "value": "200g",
+           "remainingQuantity": 35,
+           "originalPrice": {
+               "price": 85.99,
+               "currency": "BR"
+           },
+           "eurPrice": {
+               "price": 453.05,
+               "currency": "EUR"
+           }
+       }
+   ],
+   "vendorId": "5ea0ad7c5a355b13f89bff8a",
+   "vendorName": "Crimsolotu.. o come cazzo si scrive"
+}

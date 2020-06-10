@@ -1,0 +1,41 @@
+@import "~src/scss/core";
+
+.dropdown-tea-menu-button {
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+  .button-container{
+    display: flex;
+    flex-direction: row;
+    .item1{
+      @include for-desktop-up {
+        padding-right: $_15PX;
+      }
+      @include for-big-desktop-up {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.menu-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .icon-category{
+    @include for-desktop-up {
+      padding-right: $_15PX;
+    }
+    @include for-big-desktop-up {
+      padding-right: 15px;
+    }
+  }
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.menu-item-container:hover{
+  color: $primary-dark;
+}

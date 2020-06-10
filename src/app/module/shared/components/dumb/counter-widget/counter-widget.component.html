@@ -1,0 +1,10 @@
+<div class="counter-container">
+  <button class="counter counter-left override-ngmaterial-button"
+          mat-stroked-button
+          appDebounceClick (debounceClick)="changeQuantity('-')" [debounceTime]="700">-</button>
+  <div class="current-quantity item">{{currentQuantity}}</div>
+  <button class="counter counter-right item override-ngmaterial-button"
+          mat-stroked-button
+          appDebounceClick (debounceClick)="changeQuantity('+')" [debounceTime]="700">+</button>
+</div>
+

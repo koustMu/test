@@ -1,0 +1,56 @@
+@import "src/scss/core";
+
+
+
+.inner-card {
+  display: flex !important;
+  flex-direction: column !important;
+  @include tsc-product-card;
+  padding: unset !important; // rimuove il padding di 16px della card di material
+  height: 330px;
+
+  .center-img {
+    height: 150px;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 5px;
+    position: relative;
+    .action-container{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    }
+  }
+
+  mat-card-content {
+    padding: 0 15px;
+    //width: 100%;
+    margin-bottom: 0 !important;
+
+    mat-card-subtitle {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    mat-card-title {
+      display: block;
+    }
+
+  }
+  .context-card-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 10px 15px;
+    .tag-component{
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+

@@ -1,0 +1,81 @@
+@import "src/scss/core";
+
+.recommendation-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $background-section;
+  @include for-desktop-up {
+    padding: $_25PX 0;
+  }
+  @include for-big-desktop-up {
+    padding: 25px 0 ;
+  }
+  .title-section {
+    @include for-desktop-up {
+      padding:0 $_55PX $_55PX $_55PX ;
+    }
+    @include for-big-desktop-up {
+      padding:0 55px 55px 55px;
+    }
+  }
+  .carousel-recommendation{
+    align-self: center;
+    @include for-desktop-up{
+      width: 98.54vw;
+    }
+    @include for-big-desktop-up{
+      width: 1346px;
+    }
+  }
+}
+
+/*=====================OVERRIDE NGPRIME CAROUSEL======================*/
+
+.ui-carousel-dots-container {
+  display: none;
+}
+
+.pi {
+  font-size: 1.25em;
+}
+
+.ui-carousel .ui-carousel-content .ui-carousel-next, .ui-carousel .ui-carousel-content .ui-carousel-prev {
+  background-color: #ffffff;
+  color: $secondary_100;
+  border: solid 1px $secondary-14;
+  transition: color 0.2s;
+  outline-width: 0;
+}
+
+.ui-state-disabled, ui-widget:disabled {
+  opacity: 0.5;
+}
+
+.ui-carousel .ui-carousel-content .ui-carousel-next:not(.ui-state-disabled):hover {
+  background-color: #ffffff;
+  color: $third-medium;
+  border: solid 1px $secondary-14;
+  transition: color 0.2s;
+}
+
+.ui-carousel .ui-carousel-content .ui-carousel-prev:not(.ui-state-disabled):hover {
+  background-color: #ffffff;
+  color: $third-medium;
+  border: solid 1px $secondary-14;
+  transition: color 0.2s;
+}
+
+.ui-carousel-items-container {
+  @include for-desktop-up {
+    margin-left: $_15PX;
+    margin-bottom: $_30PX;
+  }
+  @include for-big-desktop-up {
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+}
+.ui-carousel-items-container .ui-carousel-item {
+  overflow: hidden !important;
+}

@@ -1,0 +1,12 @@
+
+@import "src/scss/core";
+
+
+.outer-card-product {
+  height: auto;
+  padding: 16px;
+  @media screen and (max-width: 1280px) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

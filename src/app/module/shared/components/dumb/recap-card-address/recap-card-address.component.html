@@ -1,0 +1,67 @@
+<div
+  *ngIf="!idAddressRemoved"
+  class="address-card-container">
+<mat-card
+  [ngClass]="[selectedCard, isDefaultAddress ? 'default-address' : '']"
+  class="card-address-container override-mat-card">
+  <div class="item item1">
+    <span class="title-section rh14 bold secondary" i18n><b>Addressee</b></span>
+    <div class="name-surname rh18 regular secondary-84">{{addressForm.lastName}} {{addressForm.firstName}}</div>
+    <div *ngIf="isDefaultAddress" class="default-address-text rh12 bold third-medium" i18n> Default Address</div>
+  </div>
+  <div class="item item2">
+    <span class="title-section rh14 bold secondary" i18n><b>Shipping address</b></span>
+    <div class="shipping-address rh12 regular secondary-84">
+      <div class="street-house-number">{{addressForm.address}}</div>
+      <div class="zip-code-city">{{addressForm.zipCode}} {{addressForm.city}}</div>
+      <div class="state-country">{{addressForm.state}}, {{addressForm.country.name}}</div>
+    </div>
+  </div>
+  <div class="item item3">
+    <span class="title-section rh14 bold secondary" i18n><b>Contact Information</b></span>
+    <div class="contact-information">
+      <div class="item-contact-information item1-item-contact-information">
+        <span class="rh12 bold secondary-84" i18n><b>Email:</b></span>
+        <div class="email rh12 regular secondary-84">{{addressForm.email}}</div>
+      </div>
+      <div class="item-contact-information item2-item-contact-information">
+        <span class="rh12 bold secondary-84 " i18n><b>Phone Number:</b></span>
+        <div class="phone-number rh12 regular secondary-84">{{addressForm.phoneNumber}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="item item4">
+    <button mat-button class="change-button secondary-84"
+            (click)="onClickOpenForm(addressForm.id)">Change
+    </button>
+  </div>
+  <div class="item item5">
+    <button mat-button class="remove-button primary-medium"
+            (click)="onClickRemoveAddress(addressForm.id)">Remove
+    </button>
+  </div>
+  <div class="item item6">
+    <button
+      *ngIf="goToButton"
+      routerLink="../order"
+      routerLinkActive="active"
+      mat-button class="goto-button">
+      <fa-icon size="lg"
+               class="resume-cart-button"
+               [icon]="['fas', 'angle-right']">
+      </fa-icon>
+    </button>
+    <mat-checkbox
+      [checked]="isDefaultAddress"
+      (change)="setDefaultAddress(addressForm)"
+      *ngIf="!goToButton"></mat-checkbox>
+  </div>
+</mat-card>
+  <app-form-upsert-address
+    [addressInitForm]="addressForm"
+    (closeForm)="closeFormAddress()"
+    (submitForm)="upsertAddressForm($event)"
+    *ngIf="addressIdOpen === addressForm.id"></app-form-upsert-address>
+</div>
+
+

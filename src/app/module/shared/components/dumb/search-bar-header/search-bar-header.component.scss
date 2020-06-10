@@ -1,0 +1,41 @@
+@import "~src/scss/core";
+
+.search-bar-header-container{
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  align-items: center;
+  background-color: $secondary-14;
+  border-color: transparent;
+  @include for-desktop-up{
+    width: $_520PX;
+    height: $_45PX;
+    padding: 0 $_10PX;
+  }
+  @include for-big-desktop-up{
+    width: 520px;
+    height: 45px;
+    padding: 0 10px;
+  }
+  .search-bar-input{
+    outline-width: 0;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+  .search-icon{
+    cursor: pointer;
+    height: min-content;
+    margin-left: auto;
+    @include for-desktop-up{
+      padding-right: $_20PX;
+    }
+    @include for-big-desktop-up{
+      padding-right: 20px;
+    }
+  }
+}
+
+.search-icon:hover{
+  color: $forth-medium;
+}

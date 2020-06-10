@@ -1,0 +1,14 @@
+<div id="checkmarks" >
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <div *ngFor="let checkmark of checkmarks" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2px">
+      <mat-icon class="third-dark" aria-hidden="true">done</mat-icon>
+      <span class="h12 third-dark">{{checkmark}}</span>
+    </div>
+
+    <!--TODO: da cancellare-->
+<!--    <div fxLayout="row" fxLayoutAlign="right center" fxLayoutGap="2px">-->
+<!--      <mat-icon class="third-dark" aria-hidden="true">done</mat-icon>-->
+<!--      <span class="h12 third-dark">{{checkmark.frase2}}</span>-->
+<!--    </div>-->
+  </div>
+</div>

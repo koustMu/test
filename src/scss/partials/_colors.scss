@@ -1,0 +1,92 @@
+
+/* ===========  TEASCANNER COLORS  ========== */
+
+//TODO: mapparli con colori del tema di material design
+
+$primary-dark: #661626;
+$primary-dark_4: rgba($primary-dark, .04);;
+$primary-medium: #98454F;
+$primary-light: #CC737B;
+$primary-ligther: #E3CCCE;
+$secondary_100: #333332;
+$_secondary-84: #61615E;
+$secondary-84: rgba($_secondary-84, .84);
+$_secondary-40: #3D3D3C;
+$secondary-40:  rgba($_secondary-40, .40);
+$_secondary-14: #666664;
+$secondary-14: rgba($_secondary-14, .14);
+$secondary-2: rgba($_secondary-14, .02);
+$third-dark: #1C761C;
+$third-medium: #38A649;
+$third-light: #6ED877;
+$forth-dark: #C28134;
+$forth-dark2: #ED9F40;
+$forth-medium: #F8B162;
+$forth-light: #FEE391;
+$background: #F5F7F5;
+$background-white-pure: #FFFFFF;
+$background-section: #EBEEE7;
+$secondary-label: #F0F7F0;
+$disabled-color: #DADADA;
+
+
+$primary: #3e8acc;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+
+
+/* ===========  COLOR HELPERS  ========== */
+
+.primary-dark{color: $primary-dark}
+.primary-medium{color: $primary-medium}
+.primary-light{color: $primary-light}
+.secondary-100{color: $secondary-100}
+.secondary-84{color: $secondary-84 }
+.secondary-40{color: $secondary-40}
+.secondary-40{color: $secondary-40 }
+.secondary{color: $secondary-100}
+.secondary-14{color: $secondary-14}
+.secondary-14{color: $secondary-14 }
+.secondary-2 {color: $secondary-2 !important;}
+.third-medium{color: $third-medium}
+.third-light{color: $third-light}
+.forth-dark{color: $forth-dark}
+.forth-dark2{color: $forth-dark2}
+.forth-medium{color: $forth-medium;}
+.forth-light{color: $forth-light}
+.background{color: $background}
+.background-section{color: $background-section}
+.background-white-pure{color: $background-white-pure}
+.secondary-label{color: $secondary-label}
+.primary{color: $primary}
+
+.bg-primary-dark{background-color: $primary-dark}
+.bg-primary-medium{background-color: $primary-medium}
+.bg-primary-light{background-color: $primary-light}
+.bg-secondary-100{background-color: $secondary-100}
+.bg-secondary-84{background-color: $secondary-84 }
+.bg-secondary-40{background-color: $secondary-40}
+.bg-secondary{background-color: $secondary-100}
+.bg-secondary-14{background-color: $secondary-14 }
+.bg-secondary-2 {background-color: $secondary-2 !important;}
+.bg-third-medium{background-color: $third-medium}
+.bg-third-light{background-color: $third-light}
+.bg-forth-dark{background-color: $forth-dark}
+.bg-forth-dark2{background-color: $forth-dark2}
+.bg-forth-medium{background-color: $forth-medium;}
+.bg-forth-light{background-color: $forth-light}
+.bg-background{background-color: $background}
+.bg-white-pure{background-color: $background-white-pure}
+.bg-background-section{background-color: $background-section}
+.bg-secondary-label{background-color: $secondary-label}
+.bg-primary{background-color: $primary}
+
+.success{color: $success}
+.info{color: $info}
+.warning{color: $warning}
+.danger{color: $danger}
+.third-dark{color: $third-dark}
+
+

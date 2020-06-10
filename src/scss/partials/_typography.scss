@@ -1,0 +1,293 @@
+@media (min-width: 1367px) and (max-width: 1024px) {
+  html { font-size: 10px; }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  html { font-size: 15px; }
+}
+@media (min-width: 1281px) and (max-width: 1440px) {
+  html { font-size: 14px; }
+}
+@media (min-width: 1441px) and (max-width: 1366px) {
+  html { font-size: 15px; }
+}
+@media (min-width: 1367px) {
+  html { font-size: 15px; }
+}
+
+.regular{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+}
+.light{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.medium{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+}
+
+.bold{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+.thin{
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 100;
+}
+
+
+
+/*==================  Teascanner Brand font =================*/
+@font-face {
+  font-family: 'Visby CF';
+  src: local('Visby CF Demi Bold'), local('Visby-CF-Demi-Bold'),
+  url('~src/assets/fonts/VisbyCF-DemiBold.woff2') format('woff2'),
+  url('~src/assets/fonts/VisbyCF-DemiBold.woff') format('woff'),
+  url('~src/assets/fonts/VisbyCF-DemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/*================== RESPONSIVE =================*/
+
+.rh10 {
+  font-size: 0.63rem;
+  letter-spacing: 0.4px;
+}
+
+.rh12 {
+  font-size: 0.75rem;
+  letter-spacing: 0.1px;
+}
+
+
+.rh14 {
+  font-size: 0.875rem;
+  letter-spacing: 0.015rem;
+  line-height: 1.31rem;
+}
+
+.rh16 {
+  font-size: 1rem;
+}
+
+.rh18 {
+  font-size: 1.13rem;
+}
+
+.rh20 {
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+}
+
+
+.rh24 {
+  font-size: 1.5rem;
+//  line-height: 36px;
+}
+
+
+.rh26 {
+  font-size: 1.625rem;
+  letter-spacing: 0.25px;
+}
+
+.rh32 {
+  font-size: 2rem;
+  letter-spacing: 0.25px;
+}
+
+.rh34 {
+  font-size: 2.13rem;
+  letter-spacing: 0.016rem;
+  line-height: 3.19rem;
+}
+
+
+.rh40 {
+  font-size: 2.5rem;
+  letter-spacing: 0.016rem;
+  line-height: 3.19rem;
+}
+
+
+.rh10 {
+  font-size: 0.63rem;
+  letter-spacing: 0.4px;
+}
+
+.rh12 {
+  font-size: 0.75rem;
+  letter-spacing: 0.1px;
+}
+
+
+
+
+/*================== NOT RESPONSIVE =================*/
+
+.h10 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 10px;
+  //line-height: 14px;
+  letter-spacing: 0.4px;
+}
+
+.h12 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  //line-height: 19px;
+  letter-spacing: 0.1px;
+}
+
+
+.h14 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  //line-height: 49px;
+  letter-spacing: 0.25px;
+}
+
+.h16 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  //line-height: 21px;
+}
+
+.h18 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+}
+
+.h20 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  //line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+
+.h24 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+
+.h26 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 26px;
+  //line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+.h28 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 28px;
+  //line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+.h32 {
+  font-family: Roboto-Bold, "Helvetica Neue", sans-serif;
+  font-size: 32px;
+  //line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+.h34 {
+  font-family: Roboto-Bold, "Helvetica Neue", sans-serif;
+  font-size: 34px;
+  //line-height: 30px;
+  letter-spacing: 0.25px;
+}
+
+.h48 {
+  font-family: Roboto-Bold, "Helvetica Neue", sans-serif;
+  font-size: 48px;
+  //line-height: 72px;
+}
+
+.h60 {
+  font-family: Roboto-Bold, "Helvetica Neue", sans-serif;
+  font-size: 60px;
+  //line-height: 30px;
+  letter-spacing: -0.5px;
+}
+
+
+
+
+
+/*======== Responsive viewport =========*/
+
+.v10 {
+  @include font-size-vp(10px);
+  @include letter-spacing-vp(0.4px);
+}
+
+.v12 {
+  @include font-size-vp(12px);
+  @include letter-spacing-vp(0.1px);
+}
+
+.v14 {
+  @include font-size-vp(14px);
+  @include letter-spacing-vp(0.25px);
+}
+
+.v16 {
+  @include font-size-vp(16px);
+}
+
+.v18 {
+  @include font-size-vp(18px);
+}
+
+.v20 {
+  @include font-size-vp(20px);
+  @include letter-spacing-vp(0.25px);
+}
+
+.v24 {
+  @include font-size-vp(24px);
+}
+
+.v26 {
+  @include font-size-vp(26px);
+  @include letter-spacing-vp(0.25px);
+}
+
+.v28 {
+  @include font-size-vp(28px);
+  @include letter-spacing-vp(0.25px);
+}
+
+.v32 {
+  @include font-size-vp(32px);
+  @include letter-spacing-vp(0.25px);
+}
+
+.v34 {
+  @include font-size-vp(34px);
+  @include letter-spacing-vp(0.016px);
+}
+
+.v40 {
+  @include font-size-vp(40px);
+  @include letter-spacing-vp(0.016px);
+}
+
+.v48 {
+  @include font-size-vp(48px);
+  @include letter-spacing-vp(0.016px);
+}
+
+.v60 {
+  @include font-size-vp(60px);
+  @include letter-spacing-vp(-0.5px);
+}

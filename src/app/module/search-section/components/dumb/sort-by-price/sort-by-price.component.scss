@@ -1,0 +1,14 @@
+@import "src/scss/core";
+
+#sort-by {
+
+  .text {
+    cursor: pointer;
+    color: #ABACAB;
+
+    .selected {
+      color: $primary-dark;
+    }
+  }
+
+}

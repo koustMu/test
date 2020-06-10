@@ -1,0 +1,73 @@
+@import "src/scss/core";
+
+
+.variety-chip {
+  @include tsc-variety-chip;
+  cursor: pointer;
+}
+
+.mat-standard-chip:focus::after {
+  opacity: 0 !important;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+  background-color: $primary-medium;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+span img {
+  width: 48px;
+}
+
+
+
+// TODO: da rimuovere (inusata)
+.types-expo {
+
+  .type-box {
+    padding: 6px;
+
+    // TODO: cambiare orientamento flex
+    .type-content {
+
+      @include tsc-tag-variety();
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+
+      &.rating {
+        background-color: white;
+        color: $primary-dark;
+        border: 1px solid $primary-dark;
+      }
+
+      span img {
+        width: 48px;
+      }
+
+      span {
+        text-align: center;
+      }
+
+
+    }
+  }
+
+  :nth-child(1) {
+    padding-left: unset;
+  }
+
+  :nth-child(4) {
+    padding-right: unset;
+  }
+
+  :nth-child(5) {
+    padding-left: unset;
+  }
+
+  :nth-child(8) {
+    padding-right: unset;
+  }
+}

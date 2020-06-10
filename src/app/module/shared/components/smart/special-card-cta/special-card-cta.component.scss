@@ -1,0 +1,30 @@
+@import "~src/scss/core";
+
+.special-card-container {
+  background-color: $primary-dark_4;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: content-box;
+  text-align: center;
+  width: 202px;
+  height: 330px;
+  padding: 0 50px;
+
+  .special-card-cta {
+    background-color: $primary-dark;
+    color: $background-white-pure;
+    @include for-desktop-up {
+      width: $_120PX;
+      height: $_40PX;
+
+    }
+    @include for-big-desktop-up {
+      width: 120px;
+      height: 40px;
+    }
+  }
+
+}

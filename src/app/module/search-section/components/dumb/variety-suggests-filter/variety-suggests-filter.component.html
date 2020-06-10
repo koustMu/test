@@ -1,0 +1,10 @@
+<mat-chip-list aria-label="Variety selection">
+  <mat-chip *ngFor="let suggestion of varietySuggestionsState?.suggestions"
+            (click)="onSuggestionClick(suggestion)"
+            class="variety-suggest-chip"
+            [class.suggest-accepted]="selectedSuggestion == varietySuggestionsState.searchedValue">
+    <span class="h12">{{ suggestion | titlecase }}</span>
+  </mat-chip>
+</mat-chip-list>
+
+

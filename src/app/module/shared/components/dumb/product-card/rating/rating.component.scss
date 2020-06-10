@@ -1,0 +1,17 @@
+
+
+@import "src/scss/core";
+.rating-wrapper {
+
+  .tsc-tag-rating {
+    @include tsc-tag-tea;
+    color: $secondary-84;
+  }
+  .rating-container{
+    background-color: $forth-medium;
+    color: $background-white-pure;
+    padding: 0 5px;
+    border-radius: 10px;
+
+  }
+}

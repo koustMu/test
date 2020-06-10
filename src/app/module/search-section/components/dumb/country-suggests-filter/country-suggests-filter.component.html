@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" fxLayoutAlign="flex-start" fxLayoutGap="4px">
+  <div *ngFor="let suggestion of countrySuggestionsState?.suggestions"
+       (click)="onSuggestionClick(suggestion)"
+       class="country-dummy"
+       [class.suggest-accepted]="selectedSuggestion == countrySuggestionsState?.searchedValue">
+    <app-country-flag [codeCountry]="suggestion | lowercase"></app-country-flag>
+    <diV class="overlay-container">
+      <div class="country-suggest-circle"></div>
+      <div class="country-text v14 medium">{{suggestion | uppercase}}</div>
+    </diV>
+  </div>
+
+</div>

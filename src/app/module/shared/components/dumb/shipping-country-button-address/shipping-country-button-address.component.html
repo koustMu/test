@@ -1,0 +1,15 @@
+<button class="dropdown-country-button"
+        [matMenuTriggerFor]="menu">
+  <div class="item item1" [innerHTML]="placeholder"></div>
+  <div class="item item2">
+    <fa-icon size="lg"
+             [icon]="['fas', 'angle-down']">
+    </fa-icon>
+  </div>
+</button>
+<mat-menu #menu="matMenu">
+  <button *ngFor="let value of valueList;"
+          (click)="onClickSelectValue(value)"
+          mat-menu-item
+          [innerHTML]="value.name"></button>
+</mat-menu>

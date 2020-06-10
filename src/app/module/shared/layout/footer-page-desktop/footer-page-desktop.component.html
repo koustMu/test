@@ -1,0 +1,32 @@
+<div class="footer-container">
+  <div class="pre-footer-container">
+    <app-pre-footer [isFooterWithSubscription]="isFooterWithSubscription"></app-pre-footer>
+  </div>
+  <div [ngClass]="isFooterWithSubscription ? 'footer-width-subscription' : ''" class="footer-section-container">
+    <div class="footer-section footer-section-1">
+      <app-teascanner-long-log></app-teascanner-long-log>
+      <div class="copyright rh12 regular secondary-84">© Teascanner 2020</div>
+    </div>
+    <div class="footer-section footer-section-2 rh14 medium secondary-84">
+      <a href="" class="footer-link secondary-84">About Us</a>
+      <a href="" class="footer-link secondary-84">Contact</a>
+      <a href="" class="footer-link secondary-84">Term & Condition</a>
+      <a href="" class="footer-link secondary-84">FAQ</a>
+    </div>
+    <div class="footer-section footer-section-3 rh14 medium">
+      <a href="" class="footer-link secondary-84">Ordering & Payment</a>
+      <a href="" class="footer-link secondary-84">Shipping</a>
+      <a href="" class="footer-link secondary-84">Returns</a>
+      <a href="" class="footer-link secondary-84">Privacy and Policy</a>
+    </div>
+    <div class="footer-section footer-section-4">
+      <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','instagram']"></fa-icon>
+      <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','facebook']"></fa-icon>
+      <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','twitter']"></fa-icon>
+    </div>
+    <div class="footer-section footer-section-5">
+      <span class="rh14 bold secondary-84">Secure Payment by</span>
+      <app-secure-payment-card></app-secure-payment-card>
+    </div>
+  </div>
+</div>

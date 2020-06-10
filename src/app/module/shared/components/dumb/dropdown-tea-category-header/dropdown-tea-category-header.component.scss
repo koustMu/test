@@ -1,0 +1,79 @@
+@import "~src/scss/core";
+
+.dropdown-tea-menu-button {
+  background-color: transparent;
+  border: none;
+  outline-width: 0;
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+
+    .item1 {
+      @include for-desktop-up {
+        padding-right: $_15PX;
+      }
+      @include for-big-desktop-up {
+        padding-right: 15px;
+      }
+    }
+  }
+}
+
+.menu-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .icon-category {
+    @include for-desktop-up {
+      padding-right: $_15PX;
+    }
+    @include for-big-desktop-up {
+      padding-right: 15px;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.menu-item-container:hover {
+  color: $third-dark;
+}
+
+/*========================OVERRIDE MATERIAL========================*/
+
+
+.menu-dropdown-container {
+  min-height: 0 !important;
+  @include for-desktop-up {
+    min-width: $_520PX !important;
+  }
+  @include for-big-desktop-up {
+    min-width: 520px !important;
+  }
+
+  .mat-menu-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+
+    button.mat-menu-item {
+      @include for-desktop-up {
+        width: $_250PX !important;
+        height: $_60PX;
+      }
+      @include for-big-desktop-up {
+        width: 250px !important;
+        height: 60px;
+      }
+    }
+  }
+}
+

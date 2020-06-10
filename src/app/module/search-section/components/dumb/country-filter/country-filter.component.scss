@@ -1,0 +1,35 @@
+@import "src/scss/core";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+.ng-select-override {
+
+  .ng-select-container {
+    overflow: unset !important;
+  }
+
+  .ng-select-opened {
+    border-color: red !important;
+  }
+
+  .ng-select.ng-invalid.ng-touched .ng-select-container .ng-select-opened {
+    background-color: yellow !important;
+    border-color: purple !important;
+  }
+  .ng-select .ng-select-container.ng-appearance-outline .ng-value {
+    padding-top: 0.5em;
+  }
+
+  input {
+    padding: 1em 0 0.9em 1em !important;
+  }
+
+  .ng-clear {
+    font-size: 20px !important;
+  }
+
+  .ng-value {
+    padding-left: 0.8em !important;
+    padding-top: 0.5em !important;
+  }
+
+}

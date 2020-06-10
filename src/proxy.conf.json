@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://teascanner-dev.herokuapp.com",
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {"^/api" : "https://teascanner-dev.herokuapp.com/api"}
+  }
+}

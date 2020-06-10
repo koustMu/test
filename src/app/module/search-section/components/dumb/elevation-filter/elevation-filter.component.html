@@ -1,0 +1,15 @@
+<div [class.isDisabled-text]="disabled" class="h14 primary-dark m-b-5 align-right">
+  from <span class="bold">{{value}}</span> m.
+</div>
+<mat-slider
+  class="example-margin"
+  [max]="max"
+  [min]="min"
+  [step]=100
+  [thumbLabel]=false
+  [disabled]="disabled"
+  [class.isDisabled-slider]="disabled"
+  [(ngModel)]="value"
+  (input)="onInput($event)"
+  (change)="onValueChange($event)">
+</mat-slider>

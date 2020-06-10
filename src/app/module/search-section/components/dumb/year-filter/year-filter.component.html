@@ -1,0 +1,10 @@
+<mat-chip-list multiple selectable aria-label="Year selection">
+  <mat-chip
+    *ngFor="let year of yearsState?.years"
+    [selected]="yearsState?.currentSelected == year.value"
+    (click)="onClick(year.value)"
+    (selectionChange)="onSelectionChange(year.value)"
+    class="year-chip">
+    <span class="h12">{{year.value}}</span>
+  </mat-chip>
+</mat-chip-list>

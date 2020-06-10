@@ -1,0 +1,28 @@
+@import "~src/scss/core";
+
+.dropdown-shipping-button{
+
+  @include for-desktop-up{
+    padding: 0 $_15PX;
+    width: $_105PX;
+    height: $_45PX;
+  }
+  @include for-big-desktop-up{
+    padding: 0 15px;
+    width: 105px;
+    height: 45px;
+  }
+  border-radius: 2px;
+  background-color: $secondary-14;
+  border-color: transparent;
+
+  .placeholder-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .icon-dropdown{
+      margin-left: auto;
+    }
+  }
+}

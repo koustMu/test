@@ -1,0 +1,11 @@
+<div class="tags-wrapper" fxLayout="row" fxLayoutAlign="space-around center">
+  <ng-container *ngFor="let tag of tags">
+    <div *ngIf="tag.type === tagType.YEAR || tag.type === tagType.TYPE || tag.type === tagType.ORIGIN || tag.type === tagType.ELEVATION"  class="tag-container">
+      <fa-icon *ngIf="tag.type === tagType.TYPE" class="icon-details" [icon]="['fab','envira']"></fa-icon>
+      <fa-icon *ngIf="tag.type === tagType.ORIGIN" class="icon-details" [icon]="['fas','map-marked-alt']"></fa-icon>
+      <fa-icon *ngIf="tag.type === tagType.ELEVATION" class="icon-details" [icon]="['fas','mountain']"></fa-icon>
+      <fa-icon *ngIf="tag.type === tagType.YEAR" class="icon-details" [icon]="['fas','clock']"></fa-icon>
+    <span class="h10">{{tag.value}}</span>
+    </div>
+  </ng-container>
+</div>

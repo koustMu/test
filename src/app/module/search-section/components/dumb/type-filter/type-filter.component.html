@@ -1,0 +1,31 @@
+<div class="variety">
+  <div class="h12 secondary-84 m-b-25">TYPES</div>
+
+  <mat-chip-list multiple selectable aria-label="Tea types">
+    <mat-chip
+      *ngFor="let typeFilter of ['white', 'dark', 'oolong', 'green']"
+      [disabled]="!isAvailable(typeFilter)"
+      [selected]="typesState.currentSelected == typeFilter"
+      (click)="onClick(typeFilter)"
+      (selectionChange)="onSelectionChange(typeFilter)"
+      class="variety-chip">
+      <span><img src="../../../../../../assets/images/leaf-24-transparent.png" alt="{{typeFilter}} icon"></span>
+      <span>{{typeFilter | titlecase}}</span>
+    </mat-chip>
+  </mat-chip-list>
+
+  <mat-chip-list>
+    <mat-chip
+      *ngFor="let typeFilter of ['herbal', 'black', 'matcha', 'puerh']"
+      [disabled]="!isAvailable(typeFilter)"
+      [selected]="typesState.currentSelected == typeFilter"
+      (click)="onClick(typeFilter)"
+      (selectionChange)="onSelectionChange(typeFilter)"
+      class="variety-chip">
+      <span><img src="../../../../../../assets/images/leaf-24-transparent.png" alt="{{typeFilter}} icon"></span>
+      <span>{{typeFilter | titlecase}}</span>
+    </mat-chip>
+  </mat-chip-list>
+
+</div>
+

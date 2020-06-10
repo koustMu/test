@@ -1,0 +1,67 @@
+@import "src/scss/core";
+//@import "~primeng/resources/themes/nova-light/theme.css";
+
+
+#range-filter {
+
+  .graph-bars {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  // sovrascrivono gli stili di primeng
+  .slider-override-enabled {
+    background-color: #E3CCCE !important;
+    height: 0.2em !important;
+    width: 18em !important;
+
+    .ui-slider-range {
+      background-color: $primary-dark !important;
+    }
+
+    .ui-slider-handle {
+      background-color: $primary-dark !important;
+      border: unset !important;
+      height: 1.353em !important;
+      width: 1.353em !important;
+      border-radius: 10px;
+      margin-top: -0.3715em !important;
+      cursor: grab !important;
+    }
+
+    .ui-slider-handle:focus {
+      box-shadow: 0 0 0 0.6em rgba(102, 22, 38, 0.2) !important;
+      outline: unset !important;
+      //transform: scale(2) !important; // se lo si vuole applicare necessita di transizione
+    }
+  }
+
+
+  .slider-override-disabled {
+    background-color: #E3CCCE !important;
+    height: 0.2em !important;
+    width: 18em !important;
+
+    .ui-slider-range {
+      background-color: $disabled-color !important;
+    }
+
+    .ui-slider-handle {
+      background-color: $disabled-color !important;
+      height: 1.353em !important;
+      width: 1.353em !important;
+      border-radius: 10px;
+      margin-top: -0.3715em !important;
+      cursor: grab !important;
+    }
+
+    .ui-slider-handle:focus {
+      box-shadow: unset !important;
+      outline: unset !important;
+      //transform: scale(2) !important; // se lo si vuole applicare necessita di transizione
+    }
+  }
+
+}

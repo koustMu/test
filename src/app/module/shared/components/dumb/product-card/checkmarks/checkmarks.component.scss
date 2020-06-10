@@ -1,0 +1,10 @@
+
+@import "src/scss/core";
+
+.inner-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  flex-basis: auto;
+}

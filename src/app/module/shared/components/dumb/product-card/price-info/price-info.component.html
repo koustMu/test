@@ -1,0 +1,8 @@
+<div id="price-info">
+    <div fxLayout="row" fxLayoutAlign="flex-end flex-end" fxLayoutGap="7px">
+      <div>
+        <span class="h26">{{price | currency: 'EUR'}}</span>
+      </div>
+      <div *ngIf="discountedPrice" class="h12 secondary-84 strikethrough price">{{discountedPrice | currency: 'EUR'}}</div>
+    </div>
+</div>

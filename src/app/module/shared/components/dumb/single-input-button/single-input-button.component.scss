@@ -1,0 +1,41 @@
+@import "~src/scss/core";
+
+.single-input-button-container{
+  display: flex;
+  flex-direction: row;
+  .item1{
+    border: none;
+    @media screen and (max-width: 1366px){
+      border-radius: $_4PX 0 0 $_4PX;
+      width: 14.13vw;
+      height: 1.03vw;
+      padding: $_10PX;
+    }
+    @media screen and (min-width: 1367px){
+      border-radius: 0 4px 4px 0;
+      width: 193px;
+      height: 14px;
+      padding: 10px;
+    }
+  }
+  .item2{
+    background-color: $forth-dark;
+    color: $background-white-pure;
+    border: none;
+    @media screen and (max-width: 1366px){
+      border-radius: 0 $_4PX $_4PX 0;
+      width: 5.13vw;
+      height: 2.48vw;
+    }
+    @media screen and (min-width: 1367px){
+      border-radius: 0 4px 4px 0;
+      width: 70px;
+      height: 34px;
+    }
+  }
+}
+
+
+.override-mat-buttom{
+line-height: 0;
+}

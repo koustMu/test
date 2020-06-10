@@ -1,0 +1,40 @@
+@import "~src/scss/core";
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .home-page-container-no-margin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include for-desktop-up {
+      width: 91.95vw;
+    }
+    @include for-big-desktop-up {
+      width: 1256px;
+    }
+
+    .bar-search-home {
+      transform: translateY(-50%);
+    }
+    .common-section{
+      width: 100%;
+      @include for-desktop-up {
+        padding-top: $_95PX;
+      }
+      @include for-big-desktop-up {
+        padding-top: 95px;
+      }
+    }
+    .product-country-section{
+      @include for-desktop-up {
+        padding-bottom: $_90PX;
+      }
+      @include for-big-desktop-up {
+        padding-bottom: 90px;
+      }
+    }
+  }
+}

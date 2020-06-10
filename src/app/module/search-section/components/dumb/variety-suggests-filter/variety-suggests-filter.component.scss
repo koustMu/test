@@ -1,0 +1,17 @@
+@import "src/scss/core";
+
+
+.variety-suggest-chip {
+  min-height: 28px;
+  font-weight: 400;
+  background-color: $background-white-pure;
+  border: 1px solid $secondary-40;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.suggest-accepted {
+  background-color: #98454f !important;
+  color: white !important;
+  border: unset !important;
+}

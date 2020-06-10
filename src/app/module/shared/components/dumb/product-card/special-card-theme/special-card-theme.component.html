@@ -1,0 +1,31 @@
+<mat-card class="inner-card cursor-pointer" [routerLink]="['/card', card.productId]">
+
+  <app-addon-header class="addon-header" *ngIf="card.deals?.expiration"></app-addon-header>
+
+  <app-addon-badge class="addon-badge" *ngIf="card.deals?.badge" [badgeAlert]="card.deals?.badge"></app-addon-badge>
+  <div class="center-img" *ngIf="card.thumbnail" [style.backgroundImage]="'url('+ card.thumbnail.url +')'">
+    <app-action-product-card (click)="$event.stopPropagation()" class="action-container"></app-action-product-card>
+  </div>
+  <div class="center-img" *ngIf="!card.thumbnail"
+       [style.backgroundImage]="'~src/assets/images/tea-product-sample.png'"></div>
+
+  <mat-card-content>
+
+    <mat-card-subtitle class="h12">{{card.vendorName}}</mat-card-subtitle>
+    <mat-card-title class="h16">{{card.name}}</mat-card-title>
+
+  </mat-card-content>
+  <div class="context-card-container">
+    <app-rating *ngIf="card.reviewData && card.reviewData.avg > 0" class="context-card-item" [rating]="card.reviewData"></app-rating>
+    <app-addon-selling-alert class="context-card-item" *ngIf="card.deals?.sellingAlerts"
+                             [sellingAlerts]="card.deals?.sellingAlerts"></app-addon-selling-alert>
+    <app-tags [tags]="card.tags"></app-tags>
+  </div>
+
+  <addon-footer [price]="card.price.price"
+                [discountedPrice]="card.price.discountedPrice"></addon-footer>
+
+</mat-card>
+
+
+

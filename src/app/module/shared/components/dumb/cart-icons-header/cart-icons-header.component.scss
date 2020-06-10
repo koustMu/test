@@ -1,0 +1,35 @@
+@import "~src/scss/core";
+
+.cart-icons-header-container{
+  position: relative;
+  cursor: pointer;
+  .products-counter-in-cart{
+    background-color: $primary-medium;
+    color: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    @include for-desktop-up{
+      width: $_20PX;
+      height: $_20PX;
+      border-radius: $_10PX;
+    }
+    @include for-big-desktop-up{
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+    }
+  }
+
+}
+
+.cart-icons-header-container:hover{
+  .icon-cart{
+    color: $secondary_100;
+  }
+}
+

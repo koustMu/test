@@ -1,0 +1,32 @@
+@import 'node_modules/@angular/material/theming';
+@import 'src/scss/partials/colors';
+@import 'src/scss/partials/global';
+
+
+#footer {
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  background-color: $primary-dark;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  #price-info > div { // si applica solo quando viene usato il componente figlio "price-info"
+    color: $background-white-pure !important;
+
+    .price {
+      color: darkgrey !important; //TODO: le gradazioni dei colori vanno rimappate togliendo l'opacità (che li rende trasparenti)
+    }
+
+  }
+
+  #checkmarks > div { // si applica solo quando viene usato il componente figlio "checkmarks"
+    justify-content: flex-end !important;
+    flex-direction: column !important;
+
+    span {
+      color: $background-white-pure !important;
+    }
+  }
+
+}

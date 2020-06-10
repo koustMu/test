@@ -1,0 +1,15 @@
+@import "../../../../../../scss/core";
+
+.review-card-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.review-card-box > *:not(:last-child) {
+  @include for-desktop-up {
+    margin-right: $_5PX;
+  }
+  @include for-big-desktop-up {
+    margin-right: 5px;
+  }
+}

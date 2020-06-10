@@ -1,0 +1,51 @@
+@import "src/scss/core";
+
+.overlay-container {
+  cursor: pointer;
+  height: 34px;
+  width: 34px;
+  border-radius: 20px;
+  position: relative;
+  top: -50%;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+
+  .country-suggest-circle {
+
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    opacity: 0.5;
+    border-radius: 20px;
+  }
+
+  .country-text {
+    color: #FFFFFF;
+    position: relative;
+    top: -16px;
+    left: 50%;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+}
+
+
+.suggest-accepted {
+  //background-color: #98454f !important;
+  //color: white !important;
+  //border: unset !important;
+}

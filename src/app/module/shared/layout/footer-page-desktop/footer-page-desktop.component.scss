@@ -1,0 +1,59 @@
+@import "~src/scss/core";
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  .pre-footer-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $background-section;
+  }
+  .footer-section-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include for-desktop-up{
+      width: 83.46vw;
+      height: $_250PX;
+    }
+    @include for-big-desktop-up{
+      width: 1140px;
+      height: 250px;
+    }
+    .footer-section{
+      display: flex;
+      flex-direction: column;
+      &-4>*:not(:last-child){
+        @include for-desktop-up{
+          padding-bottom: $_10PX;
+        }
+        @include for-big-desktop-up{
+          padding-bottom: 10px;
+        }
+      }
+      &-5{
+        align-items: center;
+      }
+    }
+  }
+
+}
+
+a{
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.footer-width-subscription{
+  @include for-desktop-up{
+    padding-top: $_125PX;
+  }
+  @include for-big-desktop-up{
+    padding-top: 125px;
+  }
+}

@@ -1,0 +1,204 @@
+
+// -------------- Variables -------------- //
+
+$loading-color: rgba(221, 221, 221, 0.863);
+$line-animation-color: #ecebebf1;
+$animation-duration: 2000ms;
+$gradient-offset: 52 + 16;
+
+
+
+// -------------- Tags -------------- //
+
+@mixin tsc-center-img($width:auto) {
+  display: block;
+  width: $width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@mixin tsc-chip($min-height, $l-r-padding, $border-radius, $background-color) {
+  min-height: $min-height;
+  padding-left: $l-r-padding;
+  padding-right: $l-r-padding;
+  border-radius: $border-radius;
+  background-color: $background-color;
+}
+
+@mixin tsc-variety-chip {
+  @include tsc-chip(90px, 5px, 8px, $secondary-14);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; // valutare
+  box-sizing: border-box; // valutare
+}
+
+@mixin tsc-season-chip {
+  @include tsc-chip(38px, 9px, 4px, $secondary-14);
+}
+
+@mixin tsc-year-chip {
+  @include tsc-chip(25px, 15px, 15px, $secondary-14);
+}
+
+@mixin flex-centered-tag {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@mixin tsc-tag-element($width, $height, $border-radius, $background-color, $border) {
+  @include flex-centered-tag;
+  width: $width;
+  height: $height;
+  border: $border;
+  border-radius: $border-radius;
+  background-color: $background-color;
+}
+
+@mixin tsc-tag-years {
+  @include tsc-tag-element(57px, 22px, 15px, unset, 1px solid $secondary-40);
+}
+
+@mixin tsc-tag-tea {
+  @include tsc-tag-element(57px, 18px, 10px, $secondary-label, unset);
+  color: $secondary-84;
+}
+
+@mixin tsc-tag-seasons {
+  @include tsc-tag-element(57px, 38px, 4px, unset, 1px solid $secondary-40);
+}
+
+@mixin tsc-tag-variety {
+  @include tsc-tag-element(53px, 90px, 8px, $secondary-14, unset);
+}
+
+
+// -------------- Product Card -------------- //
+
+@mixin card-root($width, $background-color, $elevation) {
+  width: $width;
+  height: auto;
+  background-color: $background-white-pure;
+
+  &:hover {
+    border: none;
+    @include mat-elevation($elevation);
+  }
+}
+
+
+@mixin tsc-product-card {
+  @include card-root(280px, #ffffff, 12);
+}
+
+// TODO
+@mixin tsc-empty-card {
+  @include card-root(280px, #ffffff, 12);
+}
+
+// TODO
+@mixin tsc-expo-card {
+  @include card-root(280px, #ffffff, 12);
+}
+
+// TODO
+@mixin tsc-special-card {
+  @include card-root(280px, #ffffff, 12);
+}
+
+
+// ------------ Responsive ----------- //
+
+@mixin for-desktop-up {
+  @media (max-width: $responsive-view) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: $no-responsive-view) {
+    @content;
+  }
+}
+
+
+
+// -------------- Responsive mixin helpers -------------- //
+
+@mixin font-size-vp($size) {@include tsc-responsive-vw(font-size, $size)}
+@mixin letter-spacing-vp($size) {@include tsc-responsive-vw(letter-spacing, $size)}
+@mixin height-vp($size) {@include tsc-responsive-vh(height, $size)}
+@mixin width-vp($size) {@include tsc-responsive-vw(width, $size)}
+@mixin min-width-vp($size) {@include tsc-responsive-vw(min-width, $size)}
+@mixin margin-top-vp($size) {@include tsc-responsive-vh(margin-top, $size)}
+@mixin margin-bottom-vp($size) {@include tsc-responsive-vh(margin-bottom, $size)}
+@mixin margin-right-vp($size) {@include tsc-responsive-vw(margin-right, $size)}
+@mixin margin-left-vp($size) {@include tsc-responsive-vw(margin-left, $size)}
+@mixin margin-vp($margin-top:0px, $margin-right:0px, $margin-bottom:0px, $margin-left:0px) {
+  @include tsc-responsive-vh(margin-top, $margin-top);
+  @include tsc-responsive-vw(margin-right, $margin-right);
+  @include tsc-responsive-vh(margin-bottom, $margin-bottom);
+  @include tsc-responsive-vw(margin-left, $margin-left);
+}
+@mixin padding-top-vp($size) {@include tsc-responsive-vh(padding-top, $size)}
+@mixin padding-bottom-vp($size) {@include tsc-responsive-vh(padding-bottom, $size)}
+@mixin padding-right-vp($size) {@include tsc-responsive-vw(padding-right, $size)}
+@mixin padding-left-vp($size) {@include tsc-responsive-vw(padding-left, $size)}
+@mixin padding-vp($padding-top:0px, $padding-right:0px, $padding-bottom:0px, $padding-left:0px) {
+  @include tsc-responsive-vh(padding-top, $padding-top);
+  @include tsc-responsive-vw(padding-right, $padding-right);
+  @include tsc-responsive-vh(padding-bottom, $padding-bottom);
+  @include tsc-responsive-vw(padding-left, $padding-left);
+}
+
+
+// strategia responsive di Teascanner
+@mixin tsc-responsive-vw($property, $size) {
+  #{$property} : get-vw($size);
+  @media #{$wide-screen} { // su viewport larghi restituisci pixel
+    #{$property}: $size;
+  }
+}
+@mixin tsc-responsive-vh($property, $size) {
+  #{$property} : get-vh($size);
+  @media #{$high-screen} {
+    #{$property}: $size;
+  }
+}
+
+// pixel -> vw
+@function get-vw($pixel) {
+  $vw-context: ($responsive-size * .01) * 1px;
+  @return ($pixel/$vw-context) * 1vw;
+}
+
+// pixel -> vh
+@function get-vh($pixel) {
+  $vh-context: ($responsive-height * .01) * 1px;
+  @return ($pixel/$vh-context) * 1vh;
+}
+
+
+
+
+// -------------- Animation mixins -------------- //
+
+@mixin background-gradient {
+  background-image: linear-gradient(90deg, $loading-color 0px, $line-animation-color 40px, $loading-color 80px);
+  background-size: 80vw;
+}
+
+@keyframes line-keyframes {
+  0%   { background-position: -100px;  }
+  40%  { background-position: 40vw;    }
+  100% { background-position: 60vw;    }
+}
+
+@mixin line-animation {
+  animation: line-keyframes $animation-duration infinite linear;
+}

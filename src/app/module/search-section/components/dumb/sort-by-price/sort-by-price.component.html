@@ -1,0 +1,20 @@
+<div id="sort-by" fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="65px">
+
+  <div fxLayout="row" fxLayoutAlign="space-around" fxLayoutGap="15px">
+    <span class="h20 medium">PRICE</span>
+    <div class="h16">
+      <div class="text">
+        <span [class.selected]="selected == 'price_asc'" (click)="onClick('price_asc')">Low to high</span> |
+      <span [class.selected]="selected == 'price_desc'" (click)="onClick('price_desc')">High to low</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="h20 medium m-r-15">SORT BY</span>
+  <div class="text h16" fxLayout="row" fxLayoutGap="5%">
+    <div [class.selected]="selected == 'review'" (click)="onClick('review')">Reviews</div>
+<!--    <mat-icon fxFlexAlign="center">expand_more</mat-icon>  TODO: per ora resta spento, perchè abbiamo solo review... -->
+  </div>
+
+
+</div>

@@ -1,0 +1,9 @@
+<mat-chip-list aria-label="Year selection">
+  <mat-chip *ngFor="let filter of appliedFilters"
+            [removable]="removable"
+            (removed)="onFilterRemoved(filter)"
+            class="applied-filter-chip">
+    <span class="h12 bold">{{filter | uppercase}}</span>
+    <mat-icon *ngIf="removable" matChipRemove>close</mat-icon>
+  </mat-chip>
+</mat-chip-list>

@@ -1,0 +1,10 @@
+<div class="review-card-box">
+  <app-star-review-card *ngFor="let start of starList;let i = index"
+                        class="rh18"
+                        [id]="identify+i"
+                        [startFull]="start.startFull"
+                        [borderFull]="start.borderFull"
+                        [borderEmpty]="start.borderEmpty"
+                        [endEmpty]="start.endEmpty"></app-star-review-card>
+</div>
+

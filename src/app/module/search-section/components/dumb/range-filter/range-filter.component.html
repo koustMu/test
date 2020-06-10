@@ -1,0 +1,18 @@
+<div id="range-filter">
+  <div class="graph-bars">
+    <app-range-filter-bar
+      *ngFor="let bar of graphBars"
+      [bar]="bar"
+      [rangeSelected]="valuesRange"
+      [disabled]="disabled"></app-range-filter-bar>
+  </div>
+  <p-slider [(ngModel)]="currentSelectedRange"
+            (ngModelChange)="onRangeSelectedChange()"
+            (onSlideEnd)="onSlideEnd($event)"
+            [range]="true"
+            [min]="min"
+            [max]="max"
+            [step]="0.1"
+            [disabled]="disabled"
+            [styleClass]="disabled ? 'slider-override-disabled' : 'slider-override-enabled'"></p-slider>
+</div>

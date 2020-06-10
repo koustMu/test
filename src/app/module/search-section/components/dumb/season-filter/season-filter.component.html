@@ -1,0 +1,12 @@
+<mat-chip-list multiple selectable aria-label="Season selection">
+  <mat-chip
+    *ngFor="let seasonFilter of ['SPRING', 'SUMMER', 'AUTUMN', 'WINTER']"
+    [disabled]="!isAvailable(seasonFilter)"
+    [selected]="seasonState?.currentSelected == seasonFilter"
+    (click)="onFilterClick(seasonFilter)"
+    (selectionChange)="onSelectionChange(seasonFilter)"
+    class="season-chip">
+    <span class="h12">{{seasonFilter | titlecase}}</span>
+  </mat-chip>
+</mat-chip-list>
+

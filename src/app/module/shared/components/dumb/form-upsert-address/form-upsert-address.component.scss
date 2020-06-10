@@ -1,0 +1,147 @@
+@import "~src/scss/core";
+
+.container-form-address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $background-white-pure;
+  z-index: -1;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: flex-start;
+  align-content: space-between;
+  @include for-desktop-up {
+    width: $_830PX;
+    height: 34.53vw;
+    padding: $_30PX;
+  }
+  @include for-big-desktop-up {
+    width: 830px;
+    height: 471.69px;
+    padding: 30px;
+  }
+
+  .sub-item {
+    display: flex;
+    flex-direction: column;
+    @include for-desktop-up {
+      height: 7vw;
+      padding-bottom: $_20PX;
+    }
+    @include for-big-desktop-up {
+      height: 95.62px;
+      padding-bottom: 20px;
+    }
+
+    .input-text {
+      display: flex;
+      flex-direction: column;
+      border-width: 1px;
+      @include for-desktop-up {
+        width: $_170PX;
+        height: 3.44vw;
+        padding: 0 $_20PX;
+      }
+      @include for-big-desktop-up {
+        width: 170px;
+        height: 47px;
+        padding: 0 20px;
+      }
+    }
+
+    .input-text-long {
+      display: flex;
+      flex-direction: column;
+      border-width: 1px;
+      @include for-desktop-up {
+        width: $_345PX;
+        height: 3.44vw;
+        padding: 0 $_20PX;
+      }
+      @include for-big-desktop-up {
+        width: 345px;
+        height: 47px;
+        padding: 0 20px;
+      }
+    }
+
+    .input-text-long-large {
+      display: flex;
+      flex-direction: column;
+      border-width: 1px;
+      @include for-desktop-up {
+        width: $_345PX;
+        height: 10.90vw;
+        padding: $_20PX;
+      }
+      @include for-big-desktop-up {
+        width: 345px;
+        height: 149px;
+        padding: 20px;
+      }
+    }
+  }
+
+  .sub-item-large {
+    height: auto;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+
+    .button {
+      @include for-desktop-up {
+        min-width: 8.93vw;
+        height: $_50PX;
+        margin: 0 $_15PX;
+      }
+      @include for-big-desktop-up {
+        min-width: 122px;
+        height: 50px;
+        padding: 0 15px;
+      }
+    }
+
+    .button-save {
+      background-color: $primary-medium;
+      color: $background-white-pure;
+      margin-right: 0;
+    }
+
+    .button-cancel {
+      background-color: $background-white-pure;
+      border-color: $primary-medium;
+      color: $primary-medium;
+      margin-left: 0;
+    }
+  }
+}
+
+  input {
+    border-color: $secondary-40;
+    background-color: $background;
+    @include for-desktop-up {
+      border-radius: $_4PX;
+    }
+    @include for-big-desktop-up {
+      border-radius: 4px;
+    }
+  }
+
+#addressForm1{
+  @include for-desktop-up{
+    margin-bottom: $_10PX;
+  }
+  @include for-big-desktop-up{
+    margin-bottom: 10px;
+  }
+}
+
+.invalid-feedback{
+  color: $danger;
+}
+.is-invalid{
+  border-color: $danger;
+}

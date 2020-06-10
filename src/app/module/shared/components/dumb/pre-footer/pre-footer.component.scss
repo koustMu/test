@@ -1,0 +1,137 @@
+@import "~src/scss/core";
+
+.pre-footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .pre-footer-context-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-section;
+    @include for-desktop-up {
+      width: 83.46vw;
+      height: $_245PX;
+    }
+    @include for-big-desktop-up {
+      width: 1140px;
+      height: 245px;
+    }
+
+    .pre-footer-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include for-desktop-up {
+        width: $_280PX;
+        height: $_140PX;
+      }
+      @include for-big-desktop-up {
+        width: 250px;
+      }
+    }
+
+    .pre-footer-icon {
+      @include for-desktop-up {
+        width: $_70PX;
+        height: $_70PX;
+      }
+      @include for-big-desktop-up {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+
+  }
+
+  .newsletter-subscription-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include for-desktop-up {
+      height: $_125PX;
+    }
+    @include for-big-desktop-up {
+      height: 125px;
+    }
+
+    .newsletter-subscription {
+      top: 0;
+      position: absolute;
+      background-color: $primary-dark;
+      border-radius: 2px;
+      height: 100%;
+      @include for-desktop-up {
+        width: $_1000PX;
+        height: $_250PX;
+      }
+      @include for-big-desktop-up {
+        width: 1000px;
+        height: 250px;
+      }
+
+      .context-newsletter-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $background-white-pure;
+        height: 100%;
+        .text-join-teascanner{
+          @include for-desktop-up {
+            margin-bottom: $_20PX;
+          }
+          @include for-big-desktop-up {
+            margin-bottom: 20px;
+          }
+        }
+        .subscription-input-button-container {
+          display: flex;
+          flex-direction: row;
+          .item1 {
+            border: 1px solid $background-white-pure;
+            background-color: transparent;
+            color: $background-white-pure;
+            @include for-desktop-up {
+              border-radius: $_4PX 0 0 $_4PX;
+              width: $_250PX;
+              padding-left: $_10PX;
+            }
+            @include for-big-desktop-up {
+              border-radius: 0 4px 4px 0;
+              width: 250px;
+              padding-left: 10px;
+            }
+          }
+
+          .item2 {
+            background-color: $background-white-pure;
+            color: $primary-dark;
+            border: 1px solid $background-white-pure;
+            @include for-desktop-up {
+              border-radius: 0 $_4PX $_4PX 0;
+              width: $_100PX;
+              height: $_50PX;
+            }
+            @include for-big-desktop-up {
+              border-radius: 0 4px 4px 0;
+              width: 100px;
+              height: 50px;
+            }
+          }
+        }
+
+
+        .override-mat-button {
+          line-height: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div *ngIf="products$ | async as products" class="recommendation-section-container">
+  <div class="title-section rh34 bold secondary" i18n>Customers who viewed this item also viewed</div>
+  <p-carousel class="carousel-recommendation" [numVisible]="4" [value]="products.products" [responsiveOptions]="responsiveOptions">
+    <ng-template  let-product pTemplate="item">
+      <app-product-card [card]="product"></app-product-card>
+    </ng-template>
+  </p-carousel>
+</div>

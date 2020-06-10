@@ -1,0 +1,10 @@
+<div>
+  <div fxLayout="row" fxLayoutAlign="space-between">
+    <div class="h12 secondary-84">CERTIFICATED ORGANIC</div>
+    <mat-slide-toggle
+      [checked]="checked"
+      [disabled]="disabled"
+      [class.toggled-override]="checked"
+      (change)="onToggleChange($event)"></mat-slide-toggle>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<mat-card class="inner-card cursor-pointer outline-none" [routerLink]="['/card', card?.productId]">
+
+  <div class="center-img" *ngIf="card?.thumbnail" [style.backgroundImage]="'url('+ card?.thumbnail.url +')'">
+    <app-action-product-card (click)="$event.stopPropagation()" class="action-container"></app-action-product-card>
+  </div>
+  <div class="center-img" *ngIf="!card?.thumbnail" [style.backgroundImage]="'~src/assets/images/tea-product-sample.png'"></div>
+
+  <!-- <mat-card-actions></mat-card-actions>-->  <!-- TODO -->
+
+  <mat-card-content>
+
+    <mat-card-subtitle class="h12">{{card?.vendorName}}</mat-card-subtitle>
+    <mat-card-title class="h16">{{card?.name}}</mat-card-title>
+  </mat-card-content>
+
+    <div class="context-card-container">
+    <app-tags class="tag-component" [tags]="card?.tags"></app-tags>
+
+    <div class="m-b-10" fxLayout="row-reverse" fxLayoutAlign="space-between">
+      <app-price-info [price]="card?.price.price" [discountedPrice]="card?.price.discountedPrice"></app-price-info>
+      <app-rating *ngIf="card?.reviewData && card?.reviewData.avg > 0" [rating]="card?.reviewData"></app-rating>
+    </div>
+
+    <app-checkmarks></app-checkmarks>
+    </div>
+
+
+
+</mat-card>
+
+

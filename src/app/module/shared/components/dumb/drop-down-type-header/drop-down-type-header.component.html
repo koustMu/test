@@ -1,0 +1,14 @@
+<button class="dropdown-shipping-button"
+        [matMenuTriggerFor]="menu">
+  <div class="placeholder-container">
+    <div class="type-choice rh12 bold secondary">{{selectedProductCategory | capitalCase}}</div>
+    <fa-icon size="lg"
+             class="icon-dropdown rh12"
+             [icon]="['fas', 'angle-down']">
+    </fa-icon>
+  </div>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="onChangeProductCategory('Tea')">Tea</button>
+  <button mat-menu-item (click)="onChangeProductCategory('Teaware')">Teaware</button>
+</mat-menu>

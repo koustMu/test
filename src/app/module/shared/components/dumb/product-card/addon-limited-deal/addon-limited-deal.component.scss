@@ -1,0 +1,29 @@
+
+@import "src/scss/core";
+
+#limited-deal {
+
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  color: $background;
+
+
+  .item1 {
+    display: flex;
+    align-items: center;
+
+
+    mat-icon {
+      font-size: 20px;
+      margin-right: 4px;
+    }
+
+  }
+
+  .discount-box {
+    border: .5px solid $background;
+    padding: 2px 6px;
+    margin-left: 4px;
+  }
+}

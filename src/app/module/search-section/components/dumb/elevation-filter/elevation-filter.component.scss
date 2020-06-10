@@ -1,0 +1,41 @@
+@import "src/scss/core";
+
+.align-right {
+  text-align: right;
+}
+
+mat-slider {
+  width: 256px;
+}
+
+.mat-slider-thumb {
+  background-color: $primary-dark !important;
+  width: 25px !important;
+  height: 25px !important;
+  bottom: -13px !important;
+}
+
+.mat-slider .mat-slider-track-background {
+  background-color: $primary-ligther !important;
+  &:hover {
+    background-color: $primary-ligther !important;
+  }
+}
+
+.mat-slider-track-fill {
+  background-color: $primary-medium !important;
+}
+
+.isDisabled-slider {
+  .mat-slider-track-background {
+    background-color: #f6f6f6 !important;
+  }
+  .mat-slider-thumb {
+    background-color: $disabled-color !important;
+    transform: scale(0.8) !important;
+  }
+}
+
+.isDisabled-text {
+  color: $disabled-color !important;
+}

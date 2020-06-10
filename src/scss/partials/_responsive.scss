@@ -1,0 +1,131 @@
+@media (max-width: 900px) {
+  html { font-size: 10px; }
+}
+@media (max-width: 750px) {
+  html { font-size: 8px; }
+}
+@media (max-width: 540px) {
+  html { font-size: 7px; }
+}
+@media (max-width: 490px) {
+  html { font-size: 6px; }
+}
+@media (max-width: 435px) {
+  html { font-size: 5px; }
+}
+@media (max-width: 479px) {
+  html { font-size: 13px; }
+}
+
+/*========== RESPONSIVE DIMENSIONS ==========*/
+
+
+$_4PX: 0.29vw;
+$_5PX: 0.37vw;
+$_10PX: 0.73vw;
+$_15PX: 1.01vw;
+$_20PX: 1.46vw;
+$_25PX: 1.83vw;
+$_30PX: 2.20vw;
+$_35PX: 2.56vw;
+$_40PX: 2.93vw;
+$_45PX: 3.29vw;
+$_50PX: 3.66vw;
+$_55PX: 4.03vw;
+$_60PX: 4.39vw;
+$_65PX: 4.76vw;
+$_70PX: 5.13vw;
+$_80PX: 5.86vw;
+$_90PX: 6.59vw;
+$_95PX: 6.96vw;
+$_100PX: 7.32vw;
+$_105PX: 7.69vw;
+$_110PX: 8.05vw;
+$_120PX: 8.79vw;
+$_125PX: 9.15vw;
+$_130PX: 9.52vw;
+$_135PX: 9.88vw;
+$_140PX: 10.25vw;
+$_145PX: 10.62vw;
+$_150PX: 10.98vw;
+$_160PX: 11.71vw;
+$_165PX: 12.08vw;
+$_170PX: 12.45vw;
+$_200PX: 14.64vw;
+$_210PX: 15.37vw;
+$_225PX: 16.47vw;
+$_240PX: 17.57vw;
+$_245PX: 17.94vw;
+$_250PX: 18.30vw;
+$_280PX: 20.50vw;
+$_300PX: 21.96vw;
+$_330PX: 24.16vw;
+$_345PX: 25.26vw;
+$_385PX: 28.19vw;
+$_400PX: 29.28vw;
+$_520PX: 38.07vw;
+$_600PX: 43.92vw;
+$_675PX: 49.41vw;
+$_695PX: 50.88vw;
+$_705PX: 51.61vw;
+$_800PX: 58.56vw;
+$_830PX: 60.76vw;
+$_840PX: 61.49vw;
+$_850PX: 62.23vw;
+$_1000PX: 73.21vw;
+$_1050PX: 76.87vw;
+$_1100PX: 80.53vw;
+
+$no-responsive-view: 1367px;
+$responsive-view: 1366px;
+$root-font-size: 16px;
+
+$responsive-size: 1366;
+$responsive-height: 768;
+$no-responsive-size: 1367;
+$no-responsive-height: 769;
+
+$wide-screen: "(min-width: #{$no-responsive-size}px)";
+$high-screen: "(min-height: #{$no-responsive-height}px)";
+
+
+// Alias per le mediaQuery di Angular Material
+$breakpoints: (
+  xs: 'screen and (max-width: 599px)',
+  sm: 'screen and (min-width: 600px) and (max-width: 959px)',
+  md: 'screen and (min-width: 960px) and (max-width: 1279px)',
+  lg: 'screen and (min-width: 1280px) and (max-width: 1919px)',
+  xl: 'screen and (min-width: 1920px) and (max-width: 5000px)',
+  lt-sm: 'screen and (max-width: 599px)',
+  lt-md: 'screen and (max-width: 959px)',
+  lt-lg: 'screen and (max-width: 1279px)',
+  lt-xl: 'screen and (max-width: 1919px)',
+  gt-xs: 'screen and (min-width: 600px)',
+  gt-sm: 'screen and (min-width: 960px)',
+  gt-md: 'screen and (min-width: 1280px)',
+  gt-lg: 'screen and (min-width: 1920px)'
+) !default;
+
+
+// Re-mapping dei breakpoint da usare in Teascanner
+$helper-breakpoints: (
+  xs: null,
+  sm: 'gt-xs',
+  md: 'gt-sm',
+  lg: 'gt-md',
+  xl: 'gt-lg'
+);
+
+
+@mixin media-breakpoint($breakpointName) {
+
+  $mediaQuery: map-get($breakpoints, $breakpointName);
+
+  @if ($mediaQuery == null) {
+    @content
+  } @else {
+    @media #{$mediaQuery} {
+      @content
+    }
+  }
+}

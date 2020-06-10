@@ -1,0 +1,16 @@
+@import "~src/scss/core";
+
+.menu-header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-header-container > *:not(:last-child) {
+  @include for-desktop-up {
+    padding-right: $_20PX;
+  }
+  @include for-big-desktop-up {
+    padding-right: 20px;
+  }
+}
+

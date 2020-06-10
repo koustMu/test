@@ -1,0 +1,25 @@
+.flag-container{
+  position: relative;
+  background-image: url("https://hatscripts.github.io/circle-flags/flags/cn.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+
+  @media screen and (max-width: 1366px){
+    width: 2.48vw;
+    height: 2.48vw;
+  }
+  @media screen and (min-width: 1367px){
+    width: 34px;
+    height: 34px;
+  }
+
+  .overlay{
+    position: absolute;
+    background-color: #00000047;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 50%;
+  }
+}

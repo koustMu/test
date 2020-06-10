@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf = "isMobile">
+    <ng-content select=".mobile"></ng-content>
+  </div>
+  <div *ngIf="!isMobile">
+    <ng-content select=".desktop"></ng-content>
+  </div>
+</div>

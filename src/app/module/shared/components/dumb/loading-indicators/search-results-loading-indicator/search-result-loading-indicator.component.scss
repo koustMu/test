@@ -1,0 +1,27 @@
+@import "~src/scss/core";
+
+:host {
+  position: relative;
+  display:block;
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left 50%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+}
+
+
+.card {
+  height: 330px;
+  width: 280px;
+  border-radius: 4px 4px 4px 4px;
+  @include background-gradient;
+  @include line-animation;
+}
+
+.outer-card {
+  height: auto;
+  padding: 15px;
+  @media screen and (max-width: 1340px) {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

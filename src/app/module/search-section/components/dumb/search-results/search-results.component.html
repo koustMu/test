@@ -1,0 +1,6 @@
+
+  <div fxLayout="row wrap" fxLayoutAlign="flex-start" [@fadingInOut]="{value:'0, void'}">
+    <div class="outer-card-product" *ngFor="let card of searchResults" [@animate]="{value:'*',params:{y:'100%'}}">
+      <app-product-card [card]="card"></app-product-card>
+    </div>
+  </div>

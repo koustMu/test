@@ -1,0 +1,30 @@
+@import "../../../../../../scss/core";
+
+.dropdown-country-button {
+  border-color: $primary-medium;
+  background-color: transparent;
+  color: $primary-medium;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: 1366px) {
+    width: $_210PX;
+    min-height: 3.44vw;
+    border-radius: $_4PX;
+    padding: 0 $_20PX;
+    .item{
+      padding:  0 $_15PX;
+    }
+  }
+  @media screen and (min-width: 1367px) {
+    width: 210px;
+    min-height: 47px;
+    border-radius: 4px;
+    padding: 8.2px;
+    .item{
+      padding: 0 15px;
+    }
+  }
+}

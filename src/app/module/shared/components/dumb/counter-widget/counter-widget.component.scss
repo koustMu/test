@@ -1,0 +1,28 @@
+@import "~src/scss/core";
+
+.counter-container{
+  display: flex;
+  flex-direction: row;
+  width: 6.52vw;
+  height: 2.42vw;
+  text-align: center;
+
+  .counter{
+    &-left{border-radius: $_4PX 0 0 $_4PX;}
+    &-right{border-radius: 0 $_4PX $_4PX 0;}
+    width: 37.5%;
+    background-color: $background-white-pure;
+  }
+  .current-quantity{
+    width: 25%;
+    align-self: center;
+  }
+
+  .override-ngmaterial-button{
+    /* Overide Angular Material*/
+    padding: 0;
+    min-width: 0;
+    line-height: 0;
+  }
+
+}

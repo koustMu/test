@@ -1,0 +1,116 @@
+<button class="dropdown-tea-menu-button"
+        [matMenuTriggerFor]="menu">
+  <span class="button-container rh16 regular secondary-100">
+    <div class="item item1 rh14 regular">TEA</div>
+    <fa-icon size="lg"
+             class="item item2"
+             [icon]="['fas', 'angle-down']">
+    </fa-icon>
+  </span>
+</button>
+<mat-menu class="menu-dropdown-container" #menu="matMenu">
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'GREEN'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          Green tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'YELLOW'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          Yellow tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'BLACK'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold ">
+          Black tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'OOLONG'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          Oolong tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'HERBAL'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          Herbal tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'PERH'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          Perh tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'DARK'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold ">
+          Dark tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+  <button routerLinkActive="active" [routerLink]="['/search']" [queryParams]="{ searchType: 'TEA', type: 'WHITE'}" mat-menu-item class="rh14 regular secondary-84" >
+    <div class="menu-item-container">
+      <fa-icon class="icon-category rh26" [icon]="['fab','envira']"></fa-icon>
+      <div class="text-container">
+        <div class="title-category rh14 bold">
+          White tea
+        </div>
+        <div class="sentence-category rh12 regular">
+          Best young tea on the world
+        </div>
+      </div>
+    </div>
+  </button>
+</mat-menu>

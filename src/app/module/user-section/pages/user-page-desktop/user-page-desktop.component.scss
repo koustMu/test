@@ -1,0 +1,18 @@
+@import "~src/scss/core";
+
+.page-desktop-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .container-frame {
+    @include for-desktop-up {
+      width: 72.62vw;
+      padding-bottom: $_90PX;
+    }
+    @include for-big-desktop-up {
+      width: 992px;
+      padding-bottom: 90px;
+    }
+  }
+}

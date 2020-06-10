@@ -1,0 +1,22 @@
+@import "src/scss/core";
+
+.tags-wrapper {
+  width: 100%;
+  .tag-container {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    align-items: center;
+    border: unset;
+    border-radius: 10px;
+    background-color: $background-section;
+    color: $secondary-84;
+    padding: 2px 5px;
+  }
+
+  .icon-details {
+    padding-right: 5px;
+  }
+
+}
+

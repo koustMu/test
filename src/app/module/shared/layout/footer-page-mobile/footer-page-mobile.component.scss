@@ -1,0 +1,95 @@
+@import "../../../../../scss/core.scss";
+.section-content{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 767px;
+}
+
+.list-container{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.list{
+    padding:4px;
+}
+
+.content.ls{
+  width:7%;
+  margin-left:2%
+
+}
+
+.content.rs{
+    margin-right:4%;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    width: 80%;
+}
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    justify-content: center;
+}
+
+.pre-footer-conatiner {
+    display: flex;
+    width:100%;
+    max-width: 767px;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.pre-footer-item {
+    width:100%;
+    display: inline-block;
+}
+
+.pre-footer-icon {
+    padding: 5%;
+    width:80%;
+
+}
+
+.item-container {
+    display: flex;
+    width:100%;
+    max-width: 767px;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+.item{
+    margin: 2.5% 
+}
+.lw{
+    display:inline-block;
+    width:20%;
+}
+
+.rw{
+    width:70%;
+    display: inline-block;
+}
+
+.secure-payment-card-container{
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+}
+
+
+:host ::ng-deep  .secure-payment-card-container{
+    width:100%;
+    justify-content: space-around;
+}
+
+.footer-section-4 {
+    display: flex;
+    width:100%;
+    justify-content: space-around;
+}

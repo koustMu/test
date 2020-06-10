@@ -1,0 +1,86 @@
+@import "~node_modules/@angular/material/theming";
+@import "colors";
+
+
+// ------------------------------------------
+// @ General
+// ------------------------------------------
+
+body {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  background-color: $background;
+}
+
+
+body, h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+h1, .h1 {
+  font-size: 1.5rem;
+  letter-spacing: 22px;
+}
+
+h2, .h2, .title {
+  font-size: 1.25rem;
+}
+
+h3, .h3, .subheader {
+  font-size: 1rem;
+}
+
+h4, .h4, .quote {
+  font-size: 0.9375rem;
+}
+
+h5, .h5 {
+  font-size: 0.8125rem;
+}
+
+h6, .h6 {
+  font-size: 0.75rem;
+}
+
+
+.placeholder {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 0.75rem;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+
+// ------------------------------------------
+// @ Icons
+// ------------------------------------------
+
+mat-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+fa-icon {
+  font-size: 15px;
+}
+
+.tsc-icon {
+  width: 15px !important;
+}
+
+
+
+
+
