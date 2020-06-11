@@ -1,13 +1,11 @@
-<div class="row justify-content-center mb-5" style="margin-right: 0">
-  <div class="col-10">
-    <h1 class="text-left text-dark mb-1">Most Popular links</h1>
-    <p class="text-muted text-left mb-5">Tea, Accessories, Teaware. Find anything</p>
-    <div class="row p-0 ">
-      <div class="col-12 p-0">
+<div style="margin-right: 0; margin-bottom: 50px; align-items: center; align-content: center; justify-content: center; justify-items: center">
+  <div style="width: 84%">
+    <h1 style="text-align: left; color: black; margin-bottom: 10px">Most Popular links</h1>
+    <p style="color: grey; text-align: left; margin-bottom: 50px;">Tea, Accessories, Teaware. Find anything</p>
+    <div style="padding: 0">
+      <div style="padding: 0; width: 100%;">
 
-        <div class="list mb-5" *ngFor="let x of list">
-
-
+        <div class="list" *ngFor="let x of list" style="margin-bottom: 50px">
           <mat-menu #appMenu="matMenu">
             <button mat-menu-item>Settings{{x}}</button>
             <button mat-menu-item>Help{{x}}</button>
@@ -16,20 +14,14 @@
           </mat-menu>
 
           <div [matMenuTriggerFor]="appMenu" class="w-100">
-            <div class="row">
-              <div class="col-9">
-                <h1 class="text-left text-dark mb-1">Best Seller</h1>
-              </div>
-              <div class="col-3">
-                <h1 class="text-right"><mat-icon>expand_more</mat-icon></h1>
+            <div>
+              <div style="width: 100%;">
+                <h1 style="text-align: left; color:black; margin-bottom: 10px; display: inline">Best Seller</h1>
+                <h1 style="text-align: right; display: inline" ><mat-icon>expand_more</mat-icon></h1>
               </div>
             </div>
-            <p class="text-muted text-left">Tea | Teaware | Third</p>
+            <p style="color: grey; text-align: left;">Tea | Teaware | Third</p>
           </div>
-
-
-
-
         </div>
       </div>
     </div>

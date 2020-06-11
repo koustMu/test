@@ -1,22 +1,28 @@
-<div class="row justify-content-center mt-4"style="margin-right: 0">
-  <div class="col-10 px-0 w-100">
-    <h2 class="text-left mb-0">Best Deals</h2>
-    <p class="text-muted" style="font-weight: bolder">Handpicked curated Tea just for you</p>
+<div style="margin-right: 0; margin-top: 40px; align-content: center; align-items: center; justify-items: center; justify-content: center">
+  <div style="width: 100%; padding:30px;">
+    <h2 style="text-align: left; margin-bottom: 0">Best Deals</h2>
+    <p style="font-weight: bolder; color: grey">Handpicked curated Tea just for you</p>
   </div>
-  <div class="col-10 px-0 mb-5">
+  <div style="width: 84%; margin-bottom: 50px; padding:30px 0; margin-left: 30px">
+
+
+
     <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators1" *ngFor="let x of data?.products; let i  = index;" attr.data-slide-to="{{i + 1}}" ></li>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active px-0">
+        <div class="carousel-item active">
           <app-product-card [card]="data?.products[0]"></app-product-card>
         </div>
-        <div class="carousel-item px-0" *ngFor="let card of data?.products" >
+        <div class="carousel-item" *ngFor="let card of data?.products" >
           <app-product-card  [card]="card"></app-product-card>
         </div>
       </div>
     </div>
+
+
+
   </div>
 </div>
