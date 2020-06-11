@@ -9,7 +9,6 @@ import {SharedModule} from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {MatMenuModule} from '@angular/material/menu';
-import {CarouselModule} from 'primeng';
 import {MatCardModule} from '@angular/material/card';
 import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
@@ -41,20 +40,20 @@ HomeMobilePageComponent,
     QuickSearchSectionHomeComponent,
     SeoLinksSectionHomeComponent
   ],
-  imports: [
-    CommonModule,
-    HomeSectionRoutingModule,
-    SharedModule,
-    MatButtonModule,
-    FontAwesomeModule,
-    MatMenuModule,
-    CarouselModule,
-    MatCardModule,
-    RouterModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatIconModule
-  ]
+    imports: [
+        CommonModule,
+        HomeSectionRoutingModule,
+        SharedModule,
+        MatButtonModule,
+        FontAwesomeModule,
+        MatMenuModule,
+
+        MatCardModule,
+        RouterModule,
+        FormsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatIconModule
+    ]
 })
 export class HomeSectionModule { }
