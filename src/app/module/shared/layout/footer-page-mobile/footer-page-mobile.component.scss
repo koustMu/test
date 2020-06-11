@@ -30,6 +30,11 @@
     display:flex;
     justify-content: center;
     width: 80%;
+    mat-list-item{
+      font-size: 1.7em;
+      color: grey;
+      height: 40px;
+    }
 }
 :host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
     justify-content: center;
@@ -60,11 +65,11 @@
     max-width: 767px;
     flex-flow: row wrap;
     justify-content: center;
-    
+
 }
 
 .item{
-    margin: 2.5% 
+    margin: 2.5%
 }
 .lw{
     display:inline-block;
@@ -92,4 +97,23 @@
     display: flex;
     width:100%;
     justify-content: space-around;
+}
+
+.form-control-sp{
+  width: 100%;
+  height: 45px;
+}
+h2{
+  font-size: 1.5em;
+}
+
+.custom-sp{
+  background-color: black;
+  color: #fff;
+}
+
+button{
+  height: 45px;
+  width: 100%;
+  margin-top: 10px;
 }
