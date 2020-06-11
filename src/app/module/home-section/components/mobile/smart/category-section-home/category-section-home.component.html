@@ -1,1 +1,10 @@
-<p>category-section-home works!</p>
+<div class="row justify-content-center mb-5">
+  <div class="col-10">
+    <div class="row">
+      <div class="col-6" *ngFor="let x of category">
+        <img src="https://teascannerdev.s3-eu-west-1.amazonaws.com/images/tea_placeholder.jpg">
+        <h3 class="text-white text-center">{{x}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

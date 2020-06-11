@@ -1,0 +1,23 @@
+.col-10-sp{
+  border: 1px solid white;
+  box-shadow: 2px 2px 5px black;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 20px;
+  mat-form-field{
+    width: 100%;
+  }
+}
+.form-control-sp{
+  width: 80%;
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: transparent;
+}
+button{
+  background-color: green;
+  width: 100%;
+  height: 3.5em;
+}

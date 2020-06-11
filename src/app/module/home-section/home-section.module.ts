@@ -19,6 +19,12 @@ import {CategorySectionHomeComponent} from "./components/mobile/smart/category-s
 import {FrontViewSectionHomeComponent} from "./components/mobile/smart/front-view-section-home/front-view-section-home.component";
 import {ProductsByCountrySectionHomeComponent} from "./components/mobile/smart/products-by-country-section-home/products-by-country-section-home.component";
 import {ScarcitySectionHomeComponent} from "./components/mobile/smart/scarcity-section-home/scarcity-section-home.component";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import { QuoteSectionComponent } from './components/mobile/smart/quote-section/quote-section.component';
+import { QuickSearchSectionHomeComponent } from './components/mobile/smart/quick-search-section-home/quick-search-section-home.component';
+import { SeoLinksSectionHomeComponent } from './components/mobile/smart/seo-links-section-home/seo-links-section-home.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -30,19 +36,25 @@ HomeMobilePageComponent,
     CategorySectionHomeComponent,
     FrontViewSectionHomeComponent,
     ProductsByCountrySectionHomeComponent,
-    ScarcitySectionHomeComponent
+    ScarcitySectionHomeComponent,
+    QuoteSectionComponent,
+    QuickSearchSectionHomeComponent,
+    SeoLinksSectionHomeComponent
   ],
-    imports: [
-        CommonModule,
-        HomeSectionRoutingModule,
-        SharedModule,
-        MatButtonModule,
-        FontAwesomeModule,
-        MatMenuModule,
-        CarouselModule,
-        MatCardModule,
-        RouterModule,
-        FormsModule
-    ]
+  imports: [
+    CommonModule,
+    HomeSectionRoutingModule,
+    SharedModule,
+    MatButtonModule,
+    FontAwesomeModule,
+    MatMenuModule,
+    CarouselModule,
+    MatCardModule,
+    RouterModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatIconModule
+  ]
 })
 export class HomeSectionModule { }

@@ -1,1 +1,31 @@
-<p>articles-section-home works!</p>
+<div class="row justify-content-center mt-4">
+  <div class="col-10 px-0">
+    <h2 class="text-left mb-0">Trending Articles</h2>
+    <p class="text-muted" style="font-weight: bolder">Handpicked curated Tea just for you</p>
+  </div>
+  <div class="col-10 px-0 mb-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card">
+            <img [src]="data?.articles[0].coverImage.url">
+            <div class="card-body w-100">
+              <h1 class="text-white text-right">{{data?.articles[0].author.name}}</h1>
+              <h1 class="text-left text-white bottom-sp">{{data?.articles[0].title}}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" *ngFor="let article of data?.articles">
+          <div class="card">
+            <img [src]="article?.coverImage.url">
+            <div class="card-body w-100">
+              <h1 class="text-white text-right">{{article?.author.name}}</h1>
+              <h1 class="text-left text-white bottom-sp">{{article?.title}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

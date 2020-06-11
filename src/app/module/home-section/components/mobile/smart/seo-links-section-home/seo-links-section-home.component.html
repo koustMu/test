@@ -1,0 +1,39 @@
+<div class="row justify-content-center mb-5">
+  <div class="col-10">
+    <h1 class="text-left text-dark mb-1">Most Popular links</h1>
+    <p class="text-muted text-left mb-5">Tea, Accessories, Teaware. Find anything</p>
+    <div class="row p-0 ">
+      <div class="col-12 p-0">
+
+        <div class="list mb-5" *ngFor="let x of list">
+
+
+          <mat-menu #appMenu="matMenu">
+            <button mat-menu-item>Settings{{x}}</button>
+            <button mat-menu-item>Help{{x}}</button>
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>Help</button>
+          </mat-menu>
+
+          <div [matMenuTriggerFor]="appMenu" class="w-100">
+            <div class="row">
+              <div class="col-9">
+                <h1 class="text-left text-dark mb-1">Best Seller</h1>
+              </div>
+              <div class="col-3">
+                <h1 class="text-right"><mat-icon>expand_more</mat-icon></h1>
+              </div>
+            </div>
+            <p class="text-muted text-left">Tea | Teaware | Third</p>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
