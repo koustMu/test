@@ -3,8 +3,12 @@
   background-color: whitesmoke;
   border-radius: 5px;
   padding: 20px;
+  margin-left: 30px;
+  width: 84%;
   mat-form-field{
     width: 100%;
+    z-index: 99999;
+    background-color: white;
   }
 }
 .form-control-sp{
