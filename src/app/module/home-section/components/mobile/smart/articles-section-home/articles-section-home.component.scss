@@ -20,3 +20,20 @@
     }
   }
 }
+.carousel-indicators{
+  position: absolute;
+  top: 410px;
+  left: 0;
+  background-color: black;
+  color: black;
+  li{
+    background-color: black;
+    opacity: 0.3;
+  }
+  li:active{
+    opacity: 1;
+  }
+  li.active{
+    opacity: 1;
+  }
+}

@@ -1,12 +1,15 @@
-<div class="row justify-content-center mt-4">
+<div class="row justify-content-center mt-4" style="margin-right: 0">
   <div class="col-10 px-0">
     <h2 class="text-left mb-0">Trending Articles</h2>
     <p class="text-muted" style="font-weight: bolder">Handpicked curated Tea just for you</p>
   </div>
   <div class="col-10 px-0 mb-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators"  *ngFor="let x of data?.articles; let i  = index;" attr.data-slide-to="{{i + 1}}"></li>
+      </ol>
       <div class="carousel-inner">
-
         <div class="carousel-item active">
           <div class="card">
             <img [src]="data?.articles[0].coverImage.url">
