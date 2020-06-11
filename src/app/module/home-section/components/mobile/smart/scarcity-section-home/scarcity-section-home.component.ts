@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductCardService} from "../../../../../core/service/product-card.service";
+import {HomeService} from "../../../../../core/service/home.service";
 
 @Component({
   selector: 'app-scarcity-section-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScarcitySectionHomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private homeService: HomeService) { }
+  data;
   ngOnInit(): void {
+    this.homeService.getScarcityProducts().subscribe(data =>{
+      this.data = data;
+    });
   }
 
 }

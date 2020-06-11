@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CategorySectionHomeComponent implements OnInit {
 
   constructor() { }
-
+  category = ['Green', 'Yellow', 'White', 'Orange', 'Black', 'Blue', 'Brown', 'Silver'];
   ngOnInit(): void {
   }
 
