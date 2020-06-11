@@ -11,6 +11,7 @@ import {icons} from './module/shared/icons';
 import {MatCardModule} from '@angular/material/card';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {SharedModule} from './module/shared/shared.module';
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {SharedModule} from './module/shared/shared.module';
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
-    SharedModule
+    SharedModule,
+    CarouselModule
   ],
   bootstrap: [AppComponent],
   providers: [
