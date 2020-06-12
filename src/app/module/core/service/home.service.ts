@@ -19,12 +19,25 @@ export class HomeService {
   private articles$ = new BehaviorSubject<ArticlesResponse>(null);
   onChangeAricles$ = this.articles$.asObservable();
 
+  private countries$ = new BehaviorSubject<ArticlesResponse>(null);
+  onChangeCountries$ = this.countries$.asObservable();
+
   public getScarcityProducts(): Observable<ScarcityResponse> {
     return this.http.get<ScarcityResponse>('/api/products/scarcity').pipe(
       map(
         (data) => {
           this.productScarcity$.next(data);
-          console.log(data);
+          return data;
+        }
+      )
+    );
+  }
+
+  public getCountries(): Observable<ScarcityResponse> {
+    return this.http.get<ScarcityResponse>('/api/common/countries').pipe(
+      map(
+        (data) => {
+          this.productScarcity$.next(data);
           return data;
         }
       )
@@ -34,10 +47,6 @@ export class HomeService {
   public getArticles(category?: string, query?: string, tags?: string[], vendorId?: string): Observable<ArticlesResponse> {
 
     const params = new HttpParams()
-    /*  .append('category', category)
-      .append('query', query)
-      .append('tags', tags)
-      .append('vendorId', vendorId);*/
     return this.http.get<ArticlesResponse>('/api/articles', {params}).pipe(
       map(
         (data) => {

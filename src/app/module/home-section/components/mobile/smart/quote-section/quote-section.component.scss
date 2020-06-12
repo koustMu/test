@@ -1,20 +1,40 @@
-.col-sp{
-  border-bottom: 2px solid black;
-  height: 150px;
-  margin-bottom: 10px;
+.quote-container{
+  margin:0 5.5vw;
+}
+
+.quote-content-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
   cursor: pointer;
-  p{
-    color: black;
-  }
-  width: 40%;
-  display: inline-block;
 }
-h1{
-  padding: 0 30px;
+
+.quote-content {
+  width:50%;
 }
-p{
-  padding: 30px;
+
+.image-wrapper {
+  text-align: center;
+    padding-bottom: 5.5vw;
+    margin: 5.5vw;
+    border-bottom: 1px solid black;
 }
-#output{
-  padding: 30px;
+
+.quote-image-wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  cursor: default;
+  margin-bottom: 5.55vw;
+}
+
+.image-content{
+  width:50%;
+  height:50vw;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.content-title{
+  text-align: center;
+  margin: 25vw;
+  color:white;
 }

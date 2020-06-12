@@ -9,9 +9,10 @@ import {SharedModule} from '../shared/shared.module';
 import {MatButtonModule} from '@angular/material/button';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {MatMenuModule} from '@angular/material/menu';
+
 import {MatCardModule} from '@angular/material/card';
 import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ArticlesSectionHomeComponent} from "./components/mobile/smart/articles-section-home/articles-section-home.component";
 import {BarSearchHomeComponent} from "./components/mobile/smart/bar-search-home/bar-search-home.component";
 import {CategorySectionHomeComponent} from "./components/mobile/smart/category-section-home/category-section-home.component";
@@ -24,6 +25,11 @@ import { QuoteSectionComponent } from './components/mobile/smart/quote-section/q
 import { QuickSearchSectionHomeComponent } from './components/mobile/smart/quick-search-section-home/quick-search-section-home.component';
 import { SeoLinksSectionHomeComponent } from './components/mobile/smart/seo-links-section-home/seo-links-section-home.component';
 import {MatIconModule} from "@angular/material/icon";
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { ChangeColorDirective } from './directives/change-color.directive';
+import { CountryComponent } from './components/mobile/smart/country/country.component';
 
 
 @NgModule({
@@ -38,22 +44,28 @@ HomeMobilePageComponent,
     ScarcitySectionHomeComponent,
     QuoteSectionComponent,
     QuickSearchSectionHomeComponent,
-    SeoLinksSectionHomeComponent
-  ],
-    imports: [
-        CommonModule,
-        HomeSectionRoutingModule,
-        SharedModule,
-        MatButtonModule,
-        FontAwesomeModule,
-        MatMenuModule,
+    SeoLinksSectionHomeComponent,
+    ChangeColorDirective,
+    CountryComponent,
 
-        MatCardModule,
-        RouterModule,
-        FormsModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        MatIconModule
-    ]
+  ],
+  imports: [
+    CommonModule,
+    HomeSectionRoutingModule,
+    SharedModule,
+    MatButtonModule,
+    FontAwesomeModule,
+    MatMenuModule,
+    MatCardModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatIconModule,
+    CarouselModule,
+    MatListModule, 
+  ]
 })
 export class HomeSectionModule { }

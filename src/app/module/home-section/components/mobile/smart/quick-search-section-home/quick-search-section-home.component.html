@@ -1,28 +1,37 @@
 <div style="margin-right: 0; margin-top: 40px; align-content: center; align-items: center; justify-items: center; justify-content: center">
-<div style="width: 84%">
+  <div class="quick-searchcontainer">
     <h1 style="text-align: left; color: black; padding: 30px">Quick Searches</h1>
-    <div>
-      <div style="width: 100%;align-content: center; align-items: center; justify-items: center; justify-content: center; padding-left: 30px">
+    <mat-list role="list" >
+      <div class="list-content" *ngFor="let i of [1,2,3,4]">
+        <mat-list-item role="listitem" >
+        <mat-card>
+          <mat-card-content>
+            <div class="content-wrapper">
+              <div class="content image">
+                <img src="./assets/images/leaf-icon.svg">
+              </div>
+              <div class="content main">
+                <p style="color: darkred;"><b>Teaware in legno</b></p>
+                <span style="color: grey;">178 accesoril</span>
+              </div>
+              <div class="content price">
+                <p style="text-align: right">da <span style="font-weight: bolder">$ 17</span></p>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </mat-list-item>
+      </div>
 
-
-      <div class="list" *ngFor="let i of list">
-          <div style="width: 25%; display: inline-block;">
-            <img src="./assets/images/leaf-icon.svg">
-          </div>
-          <div style="width: 50%; display: inline-block">
-            <p style="color: darkred;">Teaware in legno</p>
-            <span style="color: grey;">178 accesoril</span>
-          </div>
-          <div style="width: 25%; display: inline-block">
-            <p style="text-align: right">da <span style="font-weight: bolder">$ 17</span></p>
-          </div>
-        </div>
-
-        <button style="width: 100%; margin-top: 30px;height: 50px;
+      <div class="button-wrapper">
+        <button style="width: 100%;height: 50px;
         font-size: 1.5em;outline: none; border: 1px solid red;
         ">Mostra di piu</button>
       </div>
-    </div>
+      
+    </mat-list>
+    
   </div>
+
 </div>
 

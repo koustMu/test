@@ -15,3 +15,32 @@ h1{
   width: 100%;
   margin-bottom: 7px;
 }
+
+.quicksearch-container {
+ margin:0 5.55vw
+}
+
+.content-wrapper{
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.content.image, .content.price{
+  width: 25%;
+}
+.content.main{
+  width:50%;
+}
+
+.list-content{
+  margin-bottom: 10vw;
+  padding-bottom: 5.6vw;
+}
+
+:host ::ng-deep .mat-card{
+  width:100%
+}
+.button-wrapper{
+  margin:0 5.55vw
+}

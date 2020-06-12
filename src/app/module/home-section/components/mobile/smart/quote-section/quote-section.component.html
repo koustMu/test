@@ -1,25 +1,15 @@
-<div style="margin-right: 0; margin-top: 40px; align-content: center; align-items: center; justify-items: center; justify-content: center">
-<div style="width: 84%;">
-    <h1  style="font-weight: bolder; text-align: left; color: black;">Sezione tea addicted</h1>
-    <div >
-      <div class="col-sp" (click)="handle(1)" id="1" style="margin-left: 30px;">
-        <div><i class="fa fa-lg fa-leaf" aria-hidden="true" id="1l"></i></div>
-        <p class="text-center" id="1p">Best Tea in China</p>
-      </div>
-      <div class="col-sp" (click)="handle(2)" id="2" style="margin-left: 10px;">
-        <div><i class="fa fa-lg fa-leaf" aria-hidden="true" id="2l"></i></div>
-        <p class="text-center" id="2p">Best Tea in China</p>
-      </div>
-      <div class="col-sp" (click)="handle(3)" id="3" style="margin-left: 30px;">
-        <div><i class="fa fa-lg fa-leaf" aria-hidden="true" id="3l"></i></div>
-        <p class="text-center" id="3p">Best Tea in China</p>
-      </div>
-      <div class="col-sp" (click)="handle(4)" id="4" style="margin-left: 10px;">
-        <div><i class="fa fa-lg fa-leaf" aria-hidden="true" id="4l"></i></div>
-        <p class="text-center" id="4p">Best Tea in China</p>
-      </div>
-      <div id="output" style="width: 100%">
-      </div>
+
+<div class="quote-container">
+  <h1  style="font-weight: bolder; text-align: left; color: black;">Sezione tea addicted</h1>
+  <div class="quote-content-container">
+    <div class="quote-content" *ngFor="let i of [0,1,2,3]" [changeColorClick]="'red'">
+      <p class="text-center" id="1p">Best Tea in China</p>
+      <div class="image-wrapper"><i class="fa fa-lg fa-leaf" aria-hidden="true" id="1l"></i></div>
     </div>
+  </div>
+</div>
+<div class="quote-image-wrapper" >
+  <div class="image-content" *ngFor="let i of data" [ngStyle]="{'background-image':'url('+i.image+')'}">
+    <div class="content-title">{{i.color}}</div>
   </div>
 </div>

@@ -1,8 +1,17 @@
-<div style="margin-right: 0; margin-top: 80px; align-content: center; align-items: center; justify-items: center; justify-content: center">
+<div class="search-container">
   <div class="col-10-sp ">
-    <i class="fa fa-search fa-lg"></i>
+    <form class="search-form">
+      <mat-form-field class="search-field">
+        <input matInput type="text" placeholder="search" [formControl]="searchControl">
+        <button mat-button matPrefix mat-icon-button>
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </form>
+
+<!--     
     <input class="form-control-sp text-dark" type="text" placeholder="search">
-    <hr>
+    <hr> -->
     <mat-form-field>
       <mat-label>Category</mat-label>
       <mat-select>
@@ -11,8 +20,7 @@
       </mat-select>
     </mat-form-field>
   </div>
-  <div style="width: 84%; margin-top: 10px;padding: 20px;
-  margin-left: 30px;">
+  <div class="search-button">
     <button mat-raised-button style="color: white; text-align: center">Search</button>
   </div>
 </div>
