@@ -139,6 +139,9 @@
 </div>
    <div class="section-container">
     <div class="section-content">
+      <div class="content ls">
+        <p><img src="./assets/logo/logo.png"></p>
+      </div>
         <div class="content rs">
             <mat-list role="list">
                 <mat-list-item role="listitem">About Us</mat-list-item>
@@ -154,12 +157,18 @@
     </div>
 
       <div class="footer-section footer-section-5">
-        <span class="rh14 bold secondary-84">Secure Payment by</span>
+        <span class="rh14 bold secondary-84 ph">Secure Payment by</span>
         <app-secure-payment-card></app-secure-payment-card>
       </div>
       <div class="footer-section footer-section-4">
-        <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','instagram']"></fa-icon>
-        <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','facebook']"></fa-icon>
-        <fa-icon class="cursor-pointer rh20 secondary-84" [icon]="['fab','twitter']"></fa-icon>
+        <div class="sm">
+          <fa-icon class="cursor-pointer rh20 secondary-84 sm-content" [icon]="['fab','instagram']"></fa-icon>
+          <fa-icon class="cursor-pointer rh20 secondary-84 sm-content" [icon]="['fab','facebook']"></fa-icon>
+          <fa-icon class="cursor-pointer rh20 secondary-84 sm-content" [icon]="['fab','twitter']"></fa-icon>
+        </div>
+        <div class="cr">
+          <span><i class="fa fa-copyright"></i>Teascanner</span>
+        </div>
+          
       </div>
 </div>

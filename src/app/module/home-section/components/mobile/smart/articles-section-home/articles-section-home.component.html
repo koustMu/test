@@ -1,16 +1,13 @@
-<div
-  style="margin-right: 0; margin-top: 50px; align-content: center; align-items: center; justify-items: center; justify-content: center">
-  <div style="width: 84%;">
-    <h2 style="text-align: left; margin-bottom: 0">Trending Articles</h2>
-    <p style="font-weight: bolder; color: grey">Handpicked curated Tea just for you</p>
-  </div>
+<div class="article-header"> 
+    <h2 >Trending Articles</h2>
+    <p class="subheader">Handpicked curated Tea just for you</p>
 </div>
   <div class="slide-container">
     <owl-carousel-o [options]="customOptions">
 
       <ng-container *ngFor="let article of data?.articles">
         <ng-template carouselSlide >
-        <div [ngStyle]="{'background-image':getImage(article)}">
+        <div class="bgimage" [ngStyle]="{'background-image':getImage(article.coverImage)}">
           <div class="article-card background-white-pure">        
               <div class="article-card-content name">
                 <h3 class="p-10">{{article?.author.name}}</h3>

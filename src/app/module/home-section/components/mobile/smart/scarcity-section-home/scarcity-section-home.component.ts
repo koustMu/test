@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductCardService} from "../../../../../core/service/product-card.service";
-import {HomeService} from "../../../../../core/service/home.service";
+import { ProductCardService } from "../../../../../core/service/product-card.service";
+import { HomeService } from "../../../../../core/service/home.service";
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -20,7 +20,7 @@ export class ScarcitySectionHomeComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
-    margin:0,
+    margin: 0,
     // stagePadding:20,
     responsive: {
       0: {
@@ -38,11 +38,24 @@ export class ScarcitySectionHomeComponent implements OnInit {
     },
     nav: true
   }
-  
+
   ngOnInit(): void {
-    this.homeService.getScarcityProducts().subscribe(data =>{
+    this.homeService.getScarcityProducts().subscribe(data => {
       this.data = data;
-    });
+    },
+      error => {
+      //   this.data = {products:[{
+      //     favorite: true,
+      //     name: "Assam Tea",
+      //     productId: "uihjk",
+      //     specialCard: false,
+      //   },{
+      //     favorite: true,
+      //     name: "Darjeeling Tea",
+      //     productId: "drtdgh",
+      //     specialCard: false,
+      //   }]}
+       });
   }
 
 }
