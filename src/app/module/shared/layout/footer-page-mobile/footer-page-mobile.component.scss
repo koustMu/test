@@ -20,7 +20,11 @@
 
 .content.ls{
   width:7%;
-  margin-left:2%
+  margin-left:2%;
+  margin-top: 4%;
+  img{
+      width:18vw;
+  }
 
 }
 
@@ -31,8 +35,6 @@
     justify-content: center;
     width: 80%;
     mat-list-item{
-      font-size: 1.7em;
-      color: grey;
       height: 40px;
     }
 }
@@ -97,6 +99,7 @@
     display: flex;
     width:100%;
     justify-content: space-around;
+    margin-bottom: 5.5vw;
 }
 
 .form-control-sp{
@@ -116,4 +119,21 @@ button{
   height: 45px;
   width: 100%;
   margin-top: 10px;
+}
+
+.sm{
+    display: flex;
+    flex-flow: row wrap;
+    width:40%;
+    justify-content: space-around;
+}
+
+.cr{
+    width: 59%;
+    float: right;
+    text-align: right;
+    margin-right:5.55vw
+}
+.ph{
+    margin:0 5.55vw;
 }

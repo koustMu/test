@@ -1,11 +1,11 @@
 <div class="slide-container">
-    <h2 style="text-align: left; margin-bottom: 0">By Countries</h2>
-    <p style="font-weight: bolder; color: grey">From The World's Best Tea Region</p>
+    <h2>By Countries</h2>
+    <p>From The World's Best Tea Region</p>
     <owl-carousel-o [options]="customOptions">
 
       <ng-container *ngFor="let country of data">
         <ng-template carouselSlide >
-        <div [ngStyle]="{'background-image':'url(https://teascannerdev.s3-eu-west-1.amazonaws.com/articles/article_img.jpg)'}">
+        <div [ngStyle]="{'background-image':getImage('https://teascannerdev.s3-eu-west-1.amazonaws.com/articles/article_img.jpg')}">
           <div class="article-card background-white-pure">        
               <div class="article-card-content name">
                

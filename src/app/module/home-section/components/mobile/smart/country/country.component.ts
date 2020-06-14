@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HomeService } from 'src/app/module/core/service/home.service';
+import { Country } from 'src/app/module/cart-section/model/Country';
+import { ScarcityResponse } from 'src/app/module/core/api/ScarcityResponse';
 
 @Component({
   selector: 'app-country',
@@ -29,14 +31,23 @@ export class CountryComponent implements OnInit {
     nav: true
   }
 
+  getImage(image){
+    if(image) return "url("+image+")";
+    else return "url(assets/popUpDark_tea_FuZhuan_Hunan_China.png)";
+  }
+
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.homeService.getCountries().subscribe(data => {
-      this.data = data['countries'].slice(10);
-      console.log(data);
-      console.log(this.data);
-    })
+    this.homeService.getCountries().subscribe((data )=> {
+      this.data = data['countries'].slice(10);},
+      error=>{
+        this.data=[{code:"12345",name:"China"},
+                   {code:"88976",name:"Italy"},
+                   {code:"17845",name:"Afganystan"},
+                   {code:"12k45",name:"Japan"},
+                   {code:"1l345",name:"Nepal"}]
+      })
   }
 
 }

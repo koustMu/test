@@ -1,12 +1,39 @@
 h1{
   font-weight: bolder;
   width: 100%;
-  padding-left: 5.55vw;
 }
 p{
-  padding-bottom: 30px;
-  padding-left: 5.55vw;
+  
+  color: grey;
 }
+
+.seo-container{
+  margin: 0 5.5vw;
+}
+
+.seo-header {
+  margin-top: 40px;
+  h1{
+    margin-bottom: 2.77vw;
+  };
+  p{
+    padding-bottom: 8.33vw;
+  }
+}
+
+.menu-header{
+  text-align: left;color:black; display: inline
+}
+
+.menu-container{
+  span{
+    float: right;
+  };
+  p{
+    text-align: left;
+  }
+}
+
 .list{
   border-bottom: 1px solid palegoldenrod;
 }
