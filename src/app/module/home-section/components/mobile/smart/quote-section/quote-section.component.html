@@ -1,15 +1,18 @@
-
-<div class="quote-container">
-  <h1  style="font-weight: bolder; text-align: left; color: black;">Sezione tea addicted</h1>
-  <div class="quote-content-container">
-    <div class="quote-content" *ngFor="let i of [0,1,2,3]" [changeColorClick]="'red'">
-      <p class="text-center" id="1p">Best Tea in China</p>
-      <div class="image-wrapper"><i class="fa fa-lg fa-leaf" aria-hidden="true" id="1l"></i></div>
+<div class="bg-color">
+  <div class="quote-container">
+    <h1 style="font-weight: bolder; text-align: left; color: black; padding:5.5vw">Sezione tea addicted</h1>
+    <div class="quote-content-container">
+      <div class="quote-content" *ngFor="let i of [0,1,2,3]">
+        <div class="image-wrapper">
+          <p class="text-center" id="1p">Best Tea in China</p>
+          <i class="fa fa-lg fa-leaf" aria-hidden="true" id="1l"></i>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<div class="quote-image-wrapper" >
-  <div class="image-content" *ngFor="let i of data" [ngStyle]="{'background-image':'url('+i.image+')'}">
-    <div class="content-title">{{i.color}}</div>
+  <div class="quote-image-wrapper"  (click)="colorClick()">
+    <div class="image-content" [changeColorClick]="'red'" *ngFor="let i of data" [ngStyle]="{'background-image':'url('+i.image+')'}">
+      <div class="content-title"><p>{{i.color}}</p></div>
+    </div>
   </div>
 </div>

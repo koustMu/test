@@ -1,22 +1,20 @@
-<div class="slide-container">
+<div class="slide-header">
     <h2>By Countries</h2>
     <p>From The World's Best Tea Region</p>
-    <owl-carousel-o [options]="customOptions">
-
-      <ng-container *ngFor="let country of data">
-        <ng-template carouselSlide >
-        <div [ngStyle]="{'background-image':getImage('https://teascannerdev.s3-eu-west-1.amazonaws.com/articles/article_img.jpg')}">
-          <div class="article-card background-white-pure">        
-              <div class="article-card-content name">
-               
-              </div>
-              <div class="article-card-content title">
-                <h1 class="p-10">From $49</h1>
-              </div>                      
-          </div>
-        </div>
-        <h1>{{country.name}}</h1>
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
 </div>
+    <div class="slide-container">
+      <p-carousel [value]="data" [numVisible]="1.6" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+        <ng-template let-country pTemplate="item">
+          <div class="bgimage" [ngStyle]="{'background-image':getImage(country.coverImage)}">
+            <div class="article-card background-white-pure">        
+                <div class="article-card-content name">
+                </div>
+                <div class="article-card-content title">
+                  <h1 class="p-10">From $49</h1>
+                </div>                      
+            </div>
+          </div>
+          <h1>{{country.name}}</h1>
+        </ng-template>
+      </p-carousel>
+    </div>

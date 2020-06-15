@@ -11,32 +11,32 @@ import { ArticlesResponse } from 'src/app/module/core/api/ArticlesResponse';
 export class ArticlesSectionHomeComponent implements OnInit {
   data;
 
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    margin:20,
-    //stagePadding:10,
-    responsive: {
-      0: {
-        items: 1.1
-      },
-      600: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+  // customOptions: OwlOptions = {
+  //   loop: true,
+  //   mouseDrag: true,
+  //   touchDrag: true,
+  //   pullDrag: true,
+  //   dots: false,
+  //   navSpeed: 700,
+  //   navText: ['', ''],
+  //   margin:20,
+  //   //stagePadding:10,
+  //   responsive: {
+  //     0: {
+  //       items: 1.1
+  //     },
+  //     600: {
+  //       items: 2
+  //     },
+  //     740: {
+  //       items: 3
+  //     },
+  //     940: {
+  //       items: 4
+  //     }
+  //   },
+  //   nav: true
+  // }
 
   constructor(private homeService: HomeService) { }
 

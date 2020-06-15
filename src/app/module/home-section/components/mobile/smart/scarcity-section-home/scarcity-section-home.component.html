@@ -1,17 +1,14 @@
 <div class="scarcity-main">
-  <div style="width: 100%; padding:30px;">
-    <h2 style="text-align: left; margin-bottom: 0">Best Deals</h2>
-    <p style="font-weight: bolder; color: grey">Handpicked curated Tea just for you</p>
+  <div style="width: 100%;" class="scarcity-header">
+    <h2>Best Deals</h2>
+    <p>Handpicked curated Tea just for you</p>
   </div>
 
   <div class="slide-container m-l-20">
-    <owl-carousel-o [options]="customOptions">
-
-      <ng-container *ngFor="let card of data?.products">
-        <ng-template carouselSlide >
-          <app-product-card  [card]="card"></app-product-card>
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
+    <p-carousel [value]="data?.products" [numVisible]="1.1" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template let-card pTemplate="item">
+        <app-product-card  [card]="card"></app-product-card>
+      </ng-template>
+    </p-carousel>
 </div>
 </div>

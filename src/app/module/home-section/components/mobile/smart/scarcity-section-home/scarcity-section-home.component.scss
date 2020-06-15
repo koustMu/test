@@ -1,19 +1,32 @@
 .scarcity-main{
     margin-right: 0; 
-    margin-top: 40px; 
+    margin-top: 40px;     
     align-content: center; 
     align-items: center; 
     justify-items: center; 
-    justify-content: center
-}
-.scarcity-header {
-    width: 100%;
-    margin: 11.11vw 5.55vw;
+    justify-content: center;
     h2{
         font-weight: bolder;
         color: black;
+        margin-bottom: 0;
     }
     p{
         color: gray;
     }
+    
 }
+.scarcity-header {
+    padding: 5.55vw;   
+}
+
+.slide-container {
+    margin-left: 5.55vw;
+}
+
+:host ::ng-deep .ui-carousel-content{
+    padding: 0;
+  }
+  
+:host ::ng-deep .ui-button {
+    display: none;
+  }

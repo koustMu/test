@@ -25,7 +25,8 @@ import { QuoteSectionComponent } from './components/mobile/smart/quote-section/q
 import { QuickSearchSectionHomeComponent } from './components/mobile/smart/quick-search-section-home/quick-search-section-home.component';
 import { SeoLinksSectionHomeComponent } from './components/mobile/smart/seo-links-section-home/seo-links-section-home.component';
 import {MatIconModule} from "@angular/material/icon";
-import { CarouselModule } from 'ngx-owl-carousel-o';
+//import { CarouselModule } from 'ngx-owl-carousel-o';
+import {CarouselModule} from 'primeng/carousel';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { ChangeColorDirective } from './directives/change-color.directive';

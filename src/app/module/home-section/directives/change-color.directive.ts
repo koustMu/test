@@ -12,7 +12,7 @@ export class ChangeColorDirective {
     }
     @HostListener('click') onClick() {
         console.log(this.changeColorClick)
-        this.renderer.setStyle(this.el.nativeElement, 'color', this.changeColorClick)
+        this.renderer.setStyle(this.el.nativeElement, 'color', this.changeColorClick);
         }
 @HostListener('mouseleave') onMouseLeave()  {
     this.renderer.setStyle(this.el.nativeElement, 'color', 'black')

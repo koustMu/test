@@ -13,34 +13,34 @@ export class CountryComponent implements OnInit {
 
   data;
 
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    margin:20,
-    //stagePadding:10,
-    responsive: {
-      0: {
-        items: 1.7
-      },
-    },
-    nav: true
-  }
+  // customOptions: OwlOptions = {
+  //   loop: true,
+  //   mouseDrag: true,
+  //   touchDrag: true,
+  //   pullDrag: true,
+  //   dots: false,
+  //   navSpeed: 700,
+  //   navText: ['', ''],
+  //   margin:20,
+  //   //stagePadding:10,
+  //   responsive: {
+  //     0: {
+  //       items: 1.7
+  //     },
+  //   },
+  //   nav: true
+  // }
 
   getImage(image){
     if(image) return "url("+image+")";
-    else return "url(assets/popUpDark_tea_FuZhuan_Hunan_China.png)";
+    else return "url(assets/popUp/Dark_tea_FuZhuan_Hunan_China.png)";
   }
 
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.homeService.getCountries().subscribe((data )=> {
-      this.data = data['countries'].slice(10);},
+    this.homeService.getCountries().subscribe((countryResponse )=> {
+      this.data = countryResponse['countries'].slice(10);},
       error=>{
         this.data=[{code:"12345",name:"China"},
                    {code:"88976",name:"Italy"},

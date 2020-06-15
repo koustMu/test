@@ -1,5 +1,5 @@
 .quote-container{
-  margin:0 5.5vw;
+  margin: 15vw 5.55vw;
 }
 
 .quote-content-container{
@@ -7,6 +7,8 @@
   flex-flow: row wrap;
   justify-content: space-around;
   cursor: pointer;
+  margin-top: 2vw;
+  padding: 2vw 0;
 }
 
 .quote-content {
@@ -16,7 +18,7 @@
 .image-wrapper {
   text-align: center;
     padding-bottom: 5.5vw;
-    margin: 5.5vw;
+    margin: 0 5.55vw 5.55vw;
     border-bottom: 1px solid black;
 }
 
@@ -35,6 +37,13 @@
 }
 .content-title{
   text-align: center;
-  margin: 25vw;
+  margin: 25vw 0;
   color:white;
+  p{
+    background-color: gray;
+  }
+}
+.bg-color {
+  width: 100%;
+  background-color: gainsboro;
 }
