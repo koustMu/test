@@ -1,9 +1,10 @@
 
-  .slide-container{
-    margin-left: 20px;
+  .slide-header{
+    margin: 11vw 5.55vw;
     h2{
       font-weight: bolder;
       color:black;
+      margin-bottom: 0;
     };
 
     p{
@@ -11,20 +12,21 @@
     }
     
   }
-  .example-card {
-    // max-width: 400px;
-    // width:375px
-    margin-bottom: 10px;
+
+  .slide-container{
+    margin-left: 3vw;
   }
+
   
   .article-card {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+    height: 34vw;
   }
   
   .article-card-content{
-    height: 40vw;
+
     display: inline-flex;
   }
   
@@ -34,3 +36,19 @@
   .article-card-content.title{
     flex-flow: column-reverse wrap;
   }
+
+  .bgimage{
+    background-repeat: round;
+    margin: 0 2.55vw;
+    width: 52vw;
+    border-radius: 4vw;
+  }
+
+  :host ::ng-deep .ui-carousel-content{
+    padding: 0;
+  }
+  
+  :host ::ng-deep .ui-button {
+    display: none;
+  }
+  

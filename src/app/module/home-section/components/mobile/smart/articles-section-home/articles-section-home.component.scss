@@ -18,7 +18,7 @@
 
 
 .slide-container{
-  margin-left: 20px;;
+  margin-left: 3vw;;
   
 }
 .example-card {
@@ -45,5 +45,12 @@
 
 .bgimage{
   background-repeat: round;
+  margin: 0 2.55vw;
+}
+:host ::ng-deep .ui-carousel-content{
+  padding: 0;
 }
 
+:host ::ng-deep .ui-button {
+  display: none;
+}
